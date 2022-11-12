@@ -1,0 +1,98 @@
+<app-menua-admin></app-menua-admin>
+
+<div class="container px-auto mx-auto my-auto">
+    <h2 class="h2_large py-2 verde">Registrar Torneo</h2>
+    <div class="container container_form p-3">
+        <form autocomplete="off" class="row align-items-center" [formGroup]="miFormulario" >
+
+            <div class=" row gx-4 g-2 mb-3 ">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Nombre del torneo</label>
+                        <input type="text" class="form-control" formControlName="nombreTorneo"
+                        placeholder="Ingrese el nombre del Torneo">
+                      <span *ngIf="campoValido('nombreTorneo')" class="form-text text-danger">
+                        Campo obligatorio</span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Seleccione el videojuego</label>
+                        <select  class="form-select" aria-label="Default select example" formControlName="idVideojuego">
+                            <option *ngFor="let videojuego of videojuegos" value="{{videojuego.idVideojuego}}">{{videojuego.nombreVideojuego }}</option>
+                          </select>
+                        <span *ngIf="campoValido('idVideojuego')" class="form-text text-danger">Campo obligatorio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  gx-4  g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Describe la recompensa para el ganador</label>
+                        <textarea class="form-control" rows="3" formControlName="recompensa"></textarea>
+                        <span *ngIf="campoValido('recompensa')" class="form-text text-danger">Campo obligatorio</span>
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label class="form-label text-white text-left">Descripción del torneo</label>
+                        <textarea class="form-control" formControlName="descripcion" rows="3"></textarea>
+                        <span *ngIf="campoValido('descripcion')" class="form-text text-danger">Campo obligatorio</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  gx-4  g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Fecha del torneo</label>
+                        <input type="date" class="form-control" formControlName="fecha">
+                        <span *ngIf="campoValido('fecha')" class="form-text text-danger">Campo obligatorio</span>
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label class="form-label text-white text-left">Hora del torneo</label>
+                        <input type="time" class="form-control" formControlName="hora">
+                        <span *ngIf="campoValido('hora')" class="form-text text-danger">Campo obligatorio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gx-4 g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" formControlName="encargado"
+                            placeholder="Ingrese su el nombre del encargado">
+                        <span  *ngIf="campoValido('encargado')" class="form-text text-danger" >Campo obligatorio</span>
+                    </div>
+                </div>
+                
+            </div>
+
+            
+            <div class="row gx-4 g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" formControlName="url"
+                            placeholder="Ingrese la URL del canal de Twitch">
+                        <span  *ngIf="campoValido('url')" class="form-text text-danger" >Campo obligatorio</span>
+                    </div>
+                </div>
+                
+            </div>
+            <input type="text" class="form-control" formControlName="activo" hidden>
+            <div class="row gx-4 g-2 mb-3 text-center">
+                <div class="">
+                    <button type="submit" [disabled]="miFormulario.invalid"  (click)="save()"><a class="btn btn_primary ">Registrar</a></button>
+                </div>
+            </div>
+
+         
+            </form>
+    </div>
+</div>

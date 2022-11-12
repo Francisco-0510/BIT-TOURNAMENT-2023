@@ -1,0 +1,19 @@
+/* SPA: Single Page Aplication */
+.aside{
+    background-color: #191919;
+}
+p{
+    color: white;
+}
+.aside .btn_link:hover{
+    color: var(--green-primary);
+}
+.li_nav{
+    color: var(--white-color);
+    font-size: 1.2rem;
+}
+.li_nav:hover{
+    text-decoration: underline 3px var(--green-primary);
+    text-underline-offset: 10px;
+    color: var(--green-primary);}
+

@@ -1,0 +1,183 @@
+/* IMPORTACIÓN FONT POPPINS GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* IMPORTACIÓN FONT CHAKRA PATCH */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* IMPORTACIÓN FONT BEBAS NEUE */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* VARIABLES GENERALES */
+:root{
+    --black-color: #000000;
+    --white-color: #ffffff;
+    --black-bg-primary: #141414;
+    --green-primary: #00FF93;
+    --yellow-primary: #00FF93;
+    --purple-bitmx: #9100FF ;
+    --green-bitmx: #00FF00 ;
+    --yellow-bitmx:#FFEB00;
+    --pink-bitmx: #FF00F1 ;
+    --grey-light: #A3A3A3;
+    --grey-text-inputs: #7C7C7C;
+    --black-secoond: #1A1A1A;
+    --grey-bg-inputs: #313131;
+    --poppins-font: 'Poppins', sans-serif;
+    --chakra-font: 'Chakra Petch', sans-serif;
+    --bebas-font:'Bebas Neue', cursive;
+}
+.verde{
+    color: var(--green-primary);
+}
+.blanco{
+    color: var(--white-color);
+}
+body{
+    display: flex;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100% !important;
+    background:var(--black-bg-primary);
+}
+*{
+    padding: 0;
+}
+main{
+    color: var(--white-color);
+    font-family: var(--poppins-font);
+}
+/* ESTILOS PARA ELEMENTOS DE LA BARRA DE NAVEGACIÓN SUPERIOR */
+.nav-link{
+    font-family: var(--poppins-font);
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+.btn{
+    font-family: var(--bebas-font);
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+.nav-link{
+    color: var(--white-color);
+}
+.nav-link:hover{
+    text-decoration: underline 2px var(--green-primary);
+    text-underline-offset: 5px;
+    color: var(--black-bg-primary);
+    background-color: var(--green-primary);
+}
+/* ESTILOS GENERALES PARA BOTONES PRIMARIOS, SECUNDARIOS, TERCIARIOS Y LINKS */
+.btn_primary{
+    border: 1px solid var(--green-primary);
+    background: var(--green-primary);
+    color: var(--black-color);
+}
+.btn_primary:hover{
+    background: var(--black-color);
+    color: var(--white-color);
+    border: 1px solid var(--green-primary);
+}
+.btn_secondary{
+    border: 1px solid var(--white-color);
+    color: var(--white-color);
+}
+.btn_secondary:hover{
+    border: 1px solid var(--green-primary);
+    color: var(--green-primary);
+    box-shadow: 0px 0px 6px 0px rgba(0, 255, 147, 0.4);
+
+}
+.btn_link{
+    color: var(--green-primary);
+    font-size: 14px;
+}
+/* ESTILOS PARA INPUTS, EN DONDE EL USUARIO INTRODUCIRA LOS DATOS CORRESPONDIENTES */
+input[type="email"],
+input[type="text"],
+input[type="password"]{
+    background: var(--grey-bg-inputs);
+    padding: 10px 20px;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 2px;
+    font-weight: 400;
+    border-radius: 2px;
+    border: var(--grey-bg-inputs);
+    color: var(--grey-text-inputs);
+}
+.span_form{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+/* ESTILOS PARA TITULOS DE PRIMER - SEXTO NIVEL Y PARRAFOS */
+.titulo1{
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 42px;
+}
+.h1_large{
+    font-family: var(--bebas-font);
+    letter-spacing: 4.44px;
+    line-height: 77px;
+    font-size: 74px;
+    color: var(--green-primary);
+}
+.h2_large{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: var(--poppons-font);
+    line-height: 56px;
+    letter-spacing: 2.6%;
+    font-weight: bold;
+}
+.p_large{
+    font-size: 18px;
+    font-family: var(--poppins-font);
+    line-height: 33px;
+}
+.p_normal{
+    font-family: var(--poppins-font);
+    line-height: 33px;
+    font-size: 14px;
+}
+/* ESTILOS CONTENEDOR LOGIN */
+.container_form, .container_login{
+    background: #191919;
+    align-items: stretch;
+    border-radius: 10px;
+    justify-content: space-between;
+    display: flex;
+    padding: 2rem;
+    height: 30rem;
+    background-color: var(--black-secoond);
+    gap: 50px;
+    flex-direction: column;
+}
+
+
+.bg-login{ 
+    background-image: url("https://images.unsplash.com/photo-1598550487031-0898b4852123?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+    height: 35rem;
+} 
+/* ESTILOS PARA EL ENCABEZADO DE HOME */
+.header_inicio{
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    background-color: var(--black-secoond);
+    align-items: stretch;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50rem;
+}
+/* ESTILOS PARA EL APARTADO DE ADMINISTRADOR - DASHBOARD */
