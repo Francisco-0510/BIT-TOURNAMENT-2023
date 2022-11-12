@@ -1,0 +1,26 @@
+.card{
+    background-color: var(--black-secoond);
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    font-family: var(--bebas-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--green-primary);
+}
+.card img{
+    width: 100%;
+    min-height: 23rem;
+}
+.card p{
+    font-family: var(--barlow);
+    font-size: 12px;
+    line-height: 1.3em;
+    text-transform: none;
+}
+.card p > span{
+    text-transform: uppercase;
+}
+.accordion button{
+    color: white;
+}

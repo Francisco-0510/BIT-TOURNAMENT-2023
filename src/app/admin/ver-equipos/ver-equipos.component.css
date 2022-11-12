@@ -1,0 +1,18 @@
+.card {
+    background-color: var(--black-secoond);
+}
+.team_name{
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 700;
+    font-family: var(--bebas-font);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--green-primary);
+}
+.span_team{
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+}

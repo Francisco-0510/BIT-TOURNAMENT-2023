@@ -2,16 +2,110 @@
 
    <!-- CONTENEDOR PARA LA NAVEGACIÓN ENTRE LAS SECCIONES DE TORNEOS -->
   <div class="container text-center">
+
+    <div class="container d-flex align-items-end flex-column my-4">
+      <a routerLink="/registrar-torneos" class="btn btn_primary">Registrar Torneo</a>
+    </div>
+
     <div class="bd-example">
       <nav class="nav nav-pills flex-column flex-sm-row mb-3" id="nav-tab" role="tablist">
           <button class="flex-sm-fill text-sm-center nav-link mx-2  active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Torneos Activos</button>
           <button class="flex-sm-fill text-sm-center nav-link mx-2" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false" tabindex="-1">Torneos Concluidos</button>
           
       </nav>
+
+<!-- CONTENEDOR PARA TORNEOS ACTIVOS -->
+      <div class="container ">
+        <div class="card my-4 w-75 m-auto text-start" *ngFor="let torneo of torneos">
+          <div class="row g-0">
+              <img src="https://images.unsplash.com/photo-1548686304-637b8e7c663b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="img-fluid col-md-4  h-auto " alt="...">
+            <div class="col-md-8">
+              <div class="card-body">
+                <p class="p_small text-white"> {{torneo.idVideojuego}} </p>
+                <h3 class="h3_large verde">{{torneo.nombreTorneo}}</h3>
+                <p class="p_normal"> <span class="fw-bold">Recompensa: </span> {{torneo.recompensa}} </p>
+                <p class="p_normal"> <span class="fw-bold">Encargado: </span> {{torneo.encargado}} </p>
+                <p class="p_small"> <span class="fw-bold text-white">Descripción: </span> {{torneo.descripcion}} </p>
+                
+              </div>
+              <div class="card-footer">
+                <div class="row">
+                  <div class="col-md">
+                    <p class="p_small fw-bold verde">FECHA <span class="p_normal text-white">{{torneo.fecha}} - {{torneo.hora}}</span></p>
+                  <!--   <p class="p_small fw-bold verde">HORA <span class="p_normal text-white">{{torneo.hora}}</span></p> -->
+                  </div>
+                  <div class="col-md">
+                    <a href="{{torneo.url}}" class="btn btn_link twitch">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                        <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                        <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                      </svg>
+                      VER TRANSMISIÓN
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- <div class="container my-2">
+  <div class="card w-75 m-auto py-2" *ngFor="let torneo of torneos">
+    <div class="card-header text-start">
+      <h2 class="h2_large verde">{{torneo.nombreTorneo}}</h2>
+      <p class="p_large">Videojuego</p>
+      <div class="card-body">
+        <p class="p_normal fw-bold verde">FECHA <span class="p_normal text-black">{{torneo.fecha}}</span></p>
+        <p class="p_normal fw-bold verde">HORA <span class="p_normal text-black">{{torneo.hora}}</span></p>
+      </div>
+      <div class="card-footer">
+        <a href="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+          <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+          <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+        </svg>
+        VER TRANSMISIÓN
+      </a>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+   <!--    <div class="container text-center   px-auto">
+        <div class="card w-75  m-auto mb-4" *ngFor="let torneo of torneos">
+          <div class="row">
+            <div class="col-auto">
+              <p class="p_normal">{{torneo.nombreTorneo}}</p>
+            </div>
+            <div class="col-auto">
+              <p class="p_normal fw-bold verde">FECHA <span class="p_normal text-black">{{torneo.fecha}}</span></p>
+                <p class="p_normal fw-bold verde">HORA <span class="p_normal text-black">{{torneo.hora}}</span></p>
+                <a href="{{torneo.url}}" class="btn btn_link text-danger">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                    <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                    <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                  </svg>
+                  VER TRANSMISIÓN
+                </a>
+            </div>
+            <div class="col-auto">
+              <a href=""routerLink="/" class="btn btn-danger mx-2">Eliminar</a>
+              <a href="" routerLink="/registrar-torneos" class="btn btn-warning mx-2">Editar</a>
+            </div>
+
+          </div>
+          
+        </div>
+
+      </div> -->
+
       <!-- CONTENEDOR PARA MOSTRAR LAS CARDS DE LOS TORNEOS ACTIVOS -->
-      <div class="tab-content my-2" id="nav-tabContent" >
+      
+
+
+    <!--   <div class="tab-content my-2" id="nav-tabContent" >
         <div class="tab-pane fade active show" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-          <!-- CARDS-->
           <div class="card p-5 my-5 w-75 " *ngFor="let torneo of torneos">
             <div class="row ">
               <div class="col text-start">
@@ -32,7 +126,7 @@
             
           </div>
         </div>
-      </div>
+      </div> -->
       </div>
 
   </div>

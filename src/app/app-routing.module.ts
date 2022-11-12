@@ -10,6 +10,7 @@ import { VerTorneosComponent } from './admin/ver-torneos/ver-torneos.component';
 import { VerEnfrentamientosComponent } from './admin/ver-enfrentamientos/ver-enfrentamientos.component';
 import { RegistrarTorneosComponent } from './admin/registrar-torneos/registrar-torneos.component';
 import { RegistrarVideojuegosComponent } from './admin/registrar-videojuegos/registrar-videojuegos.component';
+import { EditarEquiposComponent } from './admin/editar-equipos/editar-equipos.component';
 LoginComponent;
 
 const routes: Routes = [
@@ -50,7 +51,10 @@ const routes: Routes = [
     path: 'registrar-videojuegos',
     component: RegistrarVideojuegosComponent,
   },
-  
+  {
+    path: 'editar-equipos',
+    component: EditarEquiposComponent,
+  },
   
   
   {

@@ -1,3 +1,47 @@
 <app-menua-admin></app-menua-admin>
 
-<p>ver-enfrentamientos works!</p>
+<div class="container">
+    <div class="container d-flex align-items-end flex-column my-4">
+        <a routerLink="/registrar-torneos" class="btn btn_primary">Registrar Enfrentamientos</a>
+      </div>
+      <div class="container px-auto  ">
+        <div class="card  mx-auto w-75">
+          <div class="card-header">
+           <h3 class="h3_large verde text-start">Nombre del Torneo</h3>
+          </div>
+          <div class="card-body  text-start">
+            <p class="p_large text-light">Name</p>
+          </div>
+          <div class="card-footer">
+            <form class="row gx-3 gy-2 align-items-start">
+                <div class="col-sm-3">
+                  <span class="span_form">Horario</span>
+                  <p class="p_normal fw-bold">00:00 PM</p>
+                </div>
+                <div class="col-sm-3">
+                    <span class="span_form">Fecha</span>
+                    <p class="p_normal fw-bold">00/00/00</p>
+                </div>
+                <div class="col-sm-3">
+                  <label class="visually-hidden" for="specificSizeSelect">Preference</label>
+                  <select class="form-select" id="specificSizeSelect">
+                    <option selected>Choose...</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                </div>
+                <div class="col-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                    <label class="form-check-label" for="autoSizingCheck2">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+                
+              </form>
+          </div>
+        </div>
+  </div>
+</div>
