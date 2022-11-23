@@ -19,6 +19,7 @@
     --yellow-bitmx:#FFEB00;
     --pink-bitmx: #FF00F1 ;
     --grey-light: #A3A3A3;
+    --grey-para: #8896AB;
     --grey-text-inputs: #7C7C7C;
     --black-secoond: #1A1A1A;
     --grey-bg-inputs: #313131;
@@ -26,6 +27,8 @@
     --chakra-font: 'Chakra Petch', sans-serif;
     --bebas-font:'Bebas Neue', cursive;
     --barlow:  'Barlow', sans-serif;
+    --bg-grey: #1E212A;
+    
 }
 .verde{
     color: var(--green-primary);
@@ -36,37 +39,47 @@
 .rojo{
     color: red;
 }
+.bg-grey{
+    background-color: var(--bg-grey);
+}
+.twitch{
+    margin: auto;
+    color: var(--purple-bitmx);
+}
+.twitch:hover{
+    color: var(--purple-bitmx);
+    border: solid 1px var(--purple-bitmx);
+}
 
 body{
-    display: flex;
     margin: 0;
-    box-sizing: border-box;
-    height: 100% !important;
+    padding: 0;
     background:var(--black-bg-primary);
 }
-*{
-    padding: 0;
-}
-main{
-    color: var(--white-color);
-    font-family: var(--poppins-font);
-}
+
+
 /* ESTILOS PARA ELEMENTOS DE LA BARRA DE NAVEGACIÓN SUPERIOR */
 .nav-link{
     font-family: var(--poppins-font);
     border-radius: 2px;
+    font-weight: 600;
+    color: var(--white-color);
 }
-
+a{
+    text-decoration: none;
+}
 .btn{
     font-family: var(--bebas-font);
     line-height: 1.5;
+    text-align: center;
+    margin: .25rem .125rem;
     letter-spacing: 1px;
     font-size: 18px;
+    display: flexbox;
+    box-sizing: border-box;
     border-radius: 2px;
 }
-.nav-link{
-    color: var(--white-color);
-}
+
 .nav-link:hover{
     text-decoration: underline 2px var(--green-primary);
     text-underline-offset: 5px;
@@ -141,9 +154,11 @@ input[type="time"],
     font-size: 48px;
     font-weight: 600;
     line-height: 42px;
-}
+
+    color: var(--green-primary);}
 .h1_large{
     font-family: var(--chakra-font);
+    font-weight: bolder;
     letter-spacing: 4.44px;
     text-transform:uppercase ;
     line-height: 1.041em;
@@ -151,9 +166,9 @@ input[type="time"],
     color: var(--green-primary);
 }
 .h2_large{
-    font-size: 52px;
+    font-size: 36px;
     text-transform: uppercase;
-    font-family: var(--chakra-font);
+    font-family: var(--poppins-font);
     line-height: 1.077em;
     letter-spacing: 2.6%;
     font-weight: bold;
@@ -167,7 +182,7 @@ input[type="time"],
     font-weight: bold;
 }
 .h4_large{
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.273em;
     font-family: var(--chakra-font);
     text-transform: uppercase;
@@ -175,13 +190,13 @@ input[type="time"],
 }
 .h5_large{
     font-family: var(--chakra-font);
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.333em;
     text-transform: uppercase;
     font-weight: bold;
 }
 .h6_large{
-    font-size: 16px;
+    font-size: 19px;
     font-family: var(--chakra-font);
     line-height: 1.375em;
     text-transform: uppercase;
@@ -197,6 +212,7 @@ input[type="time"],
     font-size: 24px;
     font-family: var(--barlow);
     line-height: 1.375em;
+    color: var(--grey-para);
 }
 .p_normal{
     font-family: var(--barlow);
@@ -236,7 +252,7 @@ input[type="time"],
     height: 35rem;
 } 
 /* ESTILOS PARA EL ENCABEZADO DE HOME */
-.header_inicio{
+/* .header_inicio{
     display: flex;
     flex-direction: column;
     vertical-align: middle;
@@ -246,5 +262,5 @@ input[type="time"],
     background-repeat: no-repeat;
     background-position: center;
     height: 50rem;
-}
+} */
 /* ESTILOS PARA EL APARTADO DE ADMINISTRADOR - DASHBOARD */

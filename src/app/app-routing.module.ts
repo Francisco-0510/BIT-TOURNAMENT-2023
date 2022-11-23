@@ -11,6 +11,7 @@ import { VerEnfrentamientosComponent } from './admin/ver-enfrentamientos/ver-enf
 import { RegistrarTorneosComponent } from './admin/registrar-torneos/registrar-torneos.component';
 import { RegistrarVideojuegosComponent } from './admin/registrar-videojuegos/registrar-videojuegos.component';
 import { EditarEquiposComponent } from './admin/editar-equipos/editar-equipos.component';
+import { InicioNormalComponent } from './general/inicio-normal/inicio-normal.component';
 LoginComponent;
 
 const routes: Routes = [
@@ -55,12 +56,16 @@ const routes: Routes = [
     path: 'editar-equipos',
     component: EditarEquiposComponent,
   },
+  {
+    path: 'inicio-normal',
+    component: InicioNormalComponent,
+  },
   
   
   {
     path: '**',
     pathMatch: 'full',
-    redirectTo: 'login',
+    redirectTo: 'inicio-normal',
   },
 ];
 

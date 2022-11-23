@@ -1,0 +1,26 @@
+
+main{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+.card-game .card-img-overlay h1, .card-img-overlay p {
+    color: var(--white-color);  
+    font-weight: bolder;
+}
+.card-game img {
+    filter: grayscale(100%) brightness(45%);
+}
+.card-game:hover img{
+    filter: grayscale(0%) brightness(45%);
+}
+.card-game .card-img-overlay:hover h1{
+    color: var(--green-primary);
+}
+.card .card-vs{
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    margin-bottom: 24px;
+}
