@@ -19,6 +19,10 @@ import { InicioNormalComponent } from './general/inicio-normal/inicio-normal.com
 import { MenuaAdminComponent } from './shared/menua-admin/menua-admin.component';
 import { VerTorneosComponent } from './admin/ver-torneos/ver-torneos.component';
 import { VerEnfrentamientosComponent } from './admin/ver-enfrentamientos/ver-enfrentamientos.component';
+import { DetalleTorneoComponent } from './general/detalle-torneo/detalle-torneo.component';
+import { DetalleEquiposComponent } from './general/detalle-equipos/detalle-equipos.component';
+import { DetalleVideojuegosComponent } from './general/detalle-videojuegos/detalle-videojuegos.component';
+import { DetalleEnfrentamientoComponent } from './general/detalle-enfrentamiento/detalle-enfrentamiento.component';
  
 
 @NgModule({
@@ -36,7 +40,11 @@ import { VerEnfrentamientosComponent } from './admin/ver-enfrentamientos/ver-enf
     InicioNormalComponent,
     MenuaAdminComponent,
     VerTorneosComponent,
-    VerEnfrentamientosComponent
+    VerEnfrentamientosComponent,
+    DetalleTorneoComponent,
+    DetalleEquiposComponent,
+    DetalleVideojuegosComponent,
+    DetalleEnfrentamientoComponent
   ],
   imports: [
     BrowserModule,
