@@ -17,14 +17,14 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
-.row{
+/* .row{
     align-items: center;
     display: flex;
     justify-content: center; 
-}
+} */
 .card{
     background-color: #1E212A;
-    border-left: 5px solid var(--green-primary);
+    /* border-left: 5px solid var(--green-primary); */
 }
 .bordertor{
     border-left: 2px solid red;

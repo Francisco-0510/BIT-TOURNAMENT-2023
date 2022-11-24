@@ -12,6 +12,10 @@ import { RegistrarTorneosComponent } from './admin/registrar-torneos/registrar-t
 import { RegistrarVideojuegosComponent } from './admin/registrar-videojuegos/registrar-videojuegos.component';
 import { EditarEquiposComponent } from './admin/editar-equipos/editar-equipos.component';
 import { InicioNormalComponent } from './general/inicio-normal/inicio-normal.component';
+import { DetalleEnfrentamientoComponent } from './general/detalle-enfrentamiento/detalle-enfrentamiento.component';
+import { DetalleEquiposComponent } from './general/detalle-equipos/detalle-equipos.component';
+import { DetalleTorneoComponent } from './general/detalle-torneo/detalle-torneo.component';
+import { DetalleVideojuegosComponent } from './general/detalle-videojuegos/detalle-videojuegos.component';
 LoginComponent;
 
 const routes: Routes = [
@@ -59,6 +63,22 @@ const routes: Routes = [
   {
     path: 'inicio-normal',
     component: InicioNormalComponent,
+  },
+  {
+    path: 'detalle-enfrentamiento',
+    component: DetalleEnfrentamientoComponent
+  },
+  {
+    path: 'detalle-equipo',
+    component: DetalleEquiposComponent
+  },
+  {
+    path: 'detalle-torneo',
+    component: DetalleTorneoComponent
+  },
+  {
+    path: 'detalle-videojuego',
+    component: DetalleVideojuegosComponent
   },
   
   

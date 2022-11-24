@@ -1,7 +1,7 @@
 <app-menua-admin></app-menua-admin>
 
-<div class="container">
-    <div class="card w-75 container_form border-0  py-4 px-6">
+<div class="container text-center m-auto pt-5 ">
+    <div class="card container_form border-0  my-5 pt-5">
     <h3 class="h3_large mb-0  verde">Registrar Torneo</h3>
     <p class="p_second">Rellena el formulario pñara agregar un nuevo videojuego</p>
         <form autocomplete="off" class="row align-items-center text-start py-1 px-4" [formGroup]="miFormulario" >
@@ -85,7 +85,7 @@
             <input type="text" class="form-control" formControlName="activo" hidden>
             <div class="row gx-4 g-2  text-center">
                 <div class="">
-                    <button type="submit" [disabled]="miFormulario.invalid"  (click)="save()"><a class="btn btn_primary ">Registrar</a></button>
+                    <button type="submit" [disabled]="miFormulario.invalid"  (click)="save()" class="btn btn_primary text-white-50">Registrar</button>
                 </div>
             </div>
             </form>

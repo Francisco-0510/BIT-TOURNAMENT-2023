@@ -1,14 +1,19 @@
 
 main{
+    margin: 0;
+    padding: 0;
+    top: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    background-image: url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+    height: 80vh;
+    background-position: center start;
+    background-image: url("./../../../assets/wallpaper.png");
 }
 .card-game .card-img-overlay h1, .card-img-overlay p {
     color: var(--white-color);  
     font-weight: bolder;
 }
+
 .card-game img {
     filter: grayscale(100%) brightness(45%);
 }
@@ -23,4 +28,12 @@ main{
     box-sizing: border-box;
     display: flex;
     margin-bottom: 24px;
+}
+.list-group-item{
+    background-color: #181a22;
+    color: var(--green-primary);
+}
+.list-group-item:hover{
+    background-color: var(--bg-grey);
+    color: var(--green-primary);
 }

@@ -68,6 +68,10 @@ body{
 a{
     text-decoration: none;
 }
+a:hover{
+    color: var(--green-bitmx);
+}
+
 .btn{
     font-family: var(--bebas-font);
     line-height: 1.5;
@@ -168,7 +172,7 @@ input[type="time"],
 .h2_large{
     font-size: 36px;
     text-transform: uppercase;
-    font-family: var(--poppins-font);
+    font-family: var(--bebas-font);
     line-height: 1.077em;
     letter-spacing: 2.6%;
     font-weight: bold;
@@ -197,7 +201,7 @@ input[type="time"],
 }
 .h6_large{
     font-size: 19px;
-    font-family: var(--chakra-font);
+    font-family: var(--poppins-font);
     line-height: 1.375em;
     text-transform: uppercase;
     font-weight: bold;
