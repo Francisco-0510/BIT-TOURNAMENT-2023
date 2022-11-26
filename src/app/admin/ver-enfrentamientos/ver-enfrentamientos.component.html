@@ -1,10 +1,91 @@
 <app-menua-admin></app-menua-admin>
 
-<div class="container">
+<div class="container my-5 pt-5">
     <div class="container d-flex align-items-end flex-column my-4">
         <a routerLink="/registrar-torneos" class="btn btn_primary">Registrar Enfrentamientos</a>
       </div>
-      <div class="container px-auto  ">
+      <!-- CONTENEDOR PARA ARBOL DE COMPETENCIAS -->
+     <div class="container my-4  p-3 text-center  ">
+      <div class="row bg-dark p-3">
+        <div class="col text-center">
+          <p class="p_large m-auto fw-bold text-uppercase verde">Cuartos de Final</p>
+          <span class="smalll fw-semi-bold text-white">X Partidas</span>
+        </div>
+        <div class="col text-center">
+          <p class="p_large m-auto fw-bold text-uppercase verde">Semifinales</p>
+          <span class="smalll fw-semi-bold text-white">X Partidas</span>
+        </div>
+        <div class="col text-center">
+          <p class="p_large m-auto fw-bold text-uppercase verde">Final</p>
+          <span class="smalll fw-semi-bold text-white">X Partidas</span>
+        </div>
+      </div>
+      <div class="container overflow-hidden text-center">
+        <div class="col-4">
+          <div class="row gy-5 my-2">
+            <div class="col ">
+              <div class="card mb-2 p-1  border-0  bg-grey text-black">
+                <div class="row ">
+                  <div class="col-md-4 m-auto">
+                    <img src="./../../../assets/imagenes/valoLogo.png" class="rounded m-auto d-block img-fluid" width="64px" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body text-start">
+                      <h5 class="h5_large  m-auto verde">Name Team</h5>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <div class="card mb-2 p-1  border-0  bg-success text-black">
+                <div class="row ">
+                  <div class="col-md-4 m-auto">
+                    <img src="./../../../assets/imagenes/valoLogo.png" class="rounded m-auto d-block img-fluid" width="64px" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body text-start">
+                      <h5 class="h5_large  m-auto text-white">Name Team</h5>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+          </div>
+          </div>
+          <div class="row gy-5 my-2">
+            <div class="col ">
+              <div class="card mb-2 p-1  border-0  bg-dark text-black">
+                <div class="row ">
+                  <div class="col-md-4 m-auto">
+                    <img src="./../../../assets/imagenes/valoLogo.png" class="rounded m-auto d-block img-fluid" width="64px" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body text-start">
+                      <h5 class="h5_large  m-auto verde">Name Team</h5>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <div class="card mb-2 p-1  border-0  bg-dark text-black">
+                <div class="row ">
+                  <div class="col-md-4 m-auto">
+                    <img src="./../../../assets/imagenes/valoLogo.png" class="rounded m-auto d-block img-fluid" width="64px" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body text-start">
+                      <h5 class="h5_large  m-auto verde">Name Team</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+        
+     </div>
+    
+     <!--  <div class="container px-auto  ">
         <div class="card  mx-auto w-75">
           <div class="card-header">
            <h3 class="h3_large verde text-start">Nombre del Torneo</h3>
@@ -43,5 +124,5 @@
               </form>
           </div>
         </div>
-  </div>
+  </div> -->
 </div>
