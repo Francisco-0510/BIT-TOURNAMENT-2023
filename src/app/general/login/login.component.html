@@ -17,13 +17,13 @@
                 formControlName="usuario"
                 [pattern]="emailCheck"
               />
-              <span class="span_form" *ngIf="emailReq()">Este campo es requerido</span>
-              <span class="span_form" *ngIf="emailPat()">Dirección de correo no válida</span>
+              <span class="span_form text-danger" *ngIf="emailReq()">Este campo es requerido</span>
+              <span class="span_form text-danger" *ngIf="emailPat()">Dirección de correo no válida</span>
             </div>
             <div class="my-auto ">
               <!-- <label class="form-label">Contraseña</label> -->
               <input type="password" class="form-control mb-2" formControlName="contrasenia" placeholder="Contraseña" />
-              <span *ngIf="campoValido('contrasenia')" class="span_form text-start">Mínimo 6 caractéres</span>
+              <span *ngIf="campoValido('contrasenia')" class="span_form text-danger text-start">Mínimo 6 caractéres</span>
               <div class="row  me-2 my-4">
               </div>
             </div>

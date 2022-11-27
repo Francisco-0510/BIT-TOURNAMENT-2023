@@ -1,98 +1,100 @@
 <!-- CONTENEDOR GENERAL PARA EL FORMULARIO DE REGISTRO -->
-<div class="px-4 py-5 my-5  ">
-    <div class="row g-2 form">
-        <!-- col img registro -->
-        <div class="col-md">
-                <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=878&q=80" class="img-fluid p-2 rounded-2 " alt="...">
-           
-        </div>
-        <!-- Col para el formulario de registro -->
-        <div class="col-md px-4 ">
-            <h2 class="h2_large py-4 verde">INSCRIBIRME</h2>
-            <!-- CONTENEDOR PARA EL FOPM -->
-            <form autocomplete="off" class="row  align-items-center" [formGroup]="miFormulario">
-
-                <!-- CAMPOS PARA INGRESAR NOMBRES Y APELLIDOS -->
-                <div class=" row gx-4 g-2 mb-3 ">
-                        <!-- CAMPO PARA INGRESAR LOS NOMBRES -->
-                    <div class="col-md">
-                        <div class="mb-3">
-                          <!--   <label class="form-label ">Nombre:</label> -->
-                            <input type="text" class="form-control" formControlName="nombre"
-                            placeholder="Ingrese su nombre de usuario">
-                            <span *ngIf="campoValido('nombre')" class="form-text text-danger">
-                            Campo obligatorio</span>
-                            <!-- <span class="form-text text-danger">Mínimo 4 letras</span>  -->
-                        </div>
-                    </div>
-                    <!-- CAMPO PARA INGRESAR LOS APELLIDOS -->
-                    <div class="col-md">
-                        <div class="mb-3">
-                            <input type="text" class="form-control" formControlName="apellidos"
-                            placeholder="Ingrese sus Apellidos">
-                            <span *ngIf="campoValido('apellidos')" class="form-text text-danger">
-                            Campo obligatorio</span>
-                         <!-- <span class="form-text text-danger">Mínimo 4 letras</span>  -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CAMPO PARA INGRESAR CORREO -->
-                <div class="row  gx-4  g-2 mb-3">
-                    <div class="col-xl">
-                        <div class="mb-3">
-                            <input type="email" class="form-control" formControlName="usuario"
-                            placeholder="Ingrese su correo electronico" [pattern]="emailCheck">
-                             <div>
-                            <span *ngIf="emailReq()" class="form-text text-danger">
-                                Dirección de correo no válida</span>
-                            </div>
-                            <span *ngIf="emailPattern()" class="form-text text-danger">
-                            Patrón incorrecto</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- CAMPO PARA CONTRASEÑA Y CONFIRMACIÓN -->
-                <div class="row gx-4 g-2 mb-3">
-                    <!-- CAMPO PARA INGRESAR LA CONTRASEÑA -->
-                    <div class="col-md">
-                        <div class="mb-3">
-                            <input type="password" class="form-control" formControlName="contrasenia"
-                                placeholder="Ingrese su contraseña">
-                            <span class="form-text text-danger" *ngIf="campoValido('contrasenia')">Mínimo 8
-                                caracteres</span>
-                        </div>
-                    </div>
-                      <!-- CAMPO PARA CONFIRMAR LA CONTRASEÑA -->
-                      <div class="col-md">
-                        <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Ingrese su contraseña">
-                            <span class="form-text text-danger">Mínimo 8
-                                caracteres</span>
-                            <!-- <input type="password" class="form-control" formControlName="contrasenia"
-                                placeholder="Ingrese su contraseña">
-                            <span class="form-text text-danger" *ngIf="campoValido('contrasenia')">Mínimo 8
-                                caracteres</span> -->
-                        </div>
-                    </div>
-                </div>
-
-                <input type="text" class="form-control" formControlName="tipoUser" hidden>
-
-                <div class="row gx-4 g-2 mb-3 text-center">
-                    <div class="">
-                        <button type="submit" [disabled]="miFormulario.invalid" 
-                            (click)="save()"><a href="" class="btn btn_primary ">Guardar</a></button>
-                    </div>
-                </div>
-
-                <div class="row gx-4  text-center">
-                    <div class="col blanco">¿Ya tienes una cuenta? <a [routerLink]="['/login']" class="btn btn_link">Inicia Sesión</a> </div>
-                </div>
-                </form>
+<div class="d-flex h-100   text-center  ">
+    <div class="cover-container d-flex w-100 h-100 flex-column">
+        <div class="row   align-items-center  ">
+            <!-- col img registro -->
+            <div class="col">
+                    <img src="https://res.cloudinary.com/papercrowns/image/upload/c_fill,g_face,h_1080,q_auto,w_1080/v1/optic/timeline/6368430cbcdac.jpg" class="img-fluid  " alt="...">
+               
             </div>
-        </div>
+            <!-- Col para el formulario de registro -->
+            <div class="col  ">
+                <h2 class="h2_large py-4 verde">INSCRIBIRME</h2>
+                <!-- CONTENEDOR PARA EL FOPM -->
+                <form autocomplete="off" class="row  align-items-center p-5" [formGroup]="miFormulario">
+    
+                    <!-- CAMPOS PARA INGRESAR NOMBRES Y APELLIDOS -->
+                    <div class=" row gx-4 g-2 mb-3 ">
+                            <!-- CAMPO PARA INGRESAR LOS NOMBRES -->
+                        <div class="col-md">
+                            <div class="mb-3">
+                              <!--   <label class="form-label ">Nombre:</label> -->
+                                <input type="text" class="form-control" formControlName="nombre"
+                                placeholder="Ingrese su nombre de usuario">
+                                <span *ngIf="campoValido('nombre')" class="form-text text-danger">
+                                Campo obligatorio</span>
+                                <!-- <span class="form-text text-danger">Mínimo 4 letras</span>  -->
+                            </div>
+                        </div>
+                        <!-- CAMPO PARA INGRESAR LOS APELLIDOS -->
+                        <div class="col-md">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" formControlName="apellidos"
+                                placeholder="Ingrese sus Apellidos">
+                                <span *ngIf="campoValido('apellidos')" class="form-text text-danger">
+                                Campo obligatorio</span>
+                             <!-- <span class="form-text text-danger">Mínimo 4 letras</span>  -->
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- CAMPO PARA INGRESAR CORREO -->
+                    <div class="row  gx-4  g-2 mb-3">
+                        <div class="col-xl">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" formControlName="usuario"
+                                placeholder="Ingrese su correo electronico" [pattern]="emailCheck">
+                                 <div>
+                                <span *ngIf="emailReq()" class="form-text text-danger">
+                                    Dirección de correo no válida</span>
+                                </div>
+                                <span *ngIf="emailPattern()" class="form-text text-danger">
+                                Patrón incorrecto</span>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- CAMPO PARA CONTRASEÑA Y CONFIRMACIÓN -->
+                    <div class="row gx-4 g-2 mb-3">
+                        <!-- CAMPO PARA INGRESAR LA CONTRASEÑA -->
+                        <div class="col-md">
+                            <div class="mb-3">
+                                <input type="password" class="form-control" formControlName="contrasenia"
+                                    placeholder="Ingrese su contraseña">
+                                <span class="form-text text-danger" *ngIf="campoValido('contrasenia')">Mínimo 8
+                                    caracteres</span>
+                            </div>
+                        </div>
+                          <!-- CAMPO PARA CONFIRMAR LA CONTRASEÑA -->
+                          <div class="col-md">
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Ingrese su contraseña">
+                                <span class="form-text text-danger">Mínimo 8
+                                    caracteres</span>
+                                <!-- <input type="password" class="form-control" formControlName="contrasenia"
+                                    placeholder="Ingrese su contraseña">
+                                <span class="form-text text-danger" *ngIf="campoValido('contrasenia')">Mínimo 8
+                                    caracteres</span> -->
+                            </div>
+                        </div>
+                    </div>
+    
+                    <input type="text" class="form-control" formControlName="tipoUser" hidden>
+    
+                    <div class="row gx-4 g-2 mb-3 text-center">
+                        <div class="">
+                            <button type="submit" class="btn btn_primary w-50 " [disabled]="miFormulario.invalid" 
+                                (click)="save()">Registrarme</button>
+                        </div>
+                    </div>
+    
+                    <div class="row gx-4  text-center">
+                        <div class="col blanco">¿Ya tienes una cuenta? <a [routerLink]="['/login']" class="btn btn_link">Inicia Sesión</a> </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+    </div>
     </div>
        <!-- CAMPO PAR INGRESARA APELLIDOS 
                    <div class="col-auto">
