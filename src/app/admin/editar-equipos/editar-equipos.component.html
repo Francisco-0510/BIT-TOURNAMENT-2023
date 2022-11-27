@@ -1,1 +1,95 @@
-<p>editar-equipos works!</p>
+<app-menua-admin></app-menua-admin>
+
+<div class="container text-center m-auto pt-5 ">
+    <div class="card container_form border-0  my-5 pt-5">
+    <h3 class="h3_large mb-0  verde">Registrar Equipos</h3>
+    <p class="p_second">Rellena el formulario para agregar un nuevo Equipo</p>
+        <form autocomplete="off" class="row align-items-center text-start py-1 px-4" [formGroup]="miFormulario" >
+            <div class=" row gx-4 g-2 mb-3 ">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white ">Nombre del equipo</label>
+                        <input type="text" class="form-control" formControlName="nombreEquipo"
+                        placeholder="Ingrese el nombre del Equipo">
+                      <span *ngIf="campoValido('nombreEquipo')" class="form-text text-danger">
+                        Campo obligatorio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  gx-4  g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Nombre del Lider de Equipo</label>
+                        <input type="text" class="form-control" formControlName="lider"
+                        placeholder="Ingrese el nombre del lider del equipo">                        
+                        <span *ngIf="campoValido('lider')" class="form-text text-danger">Campo obligatorio</span>
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label class="form-label text-white text-left">URL del Logo del Equipo </label>
+                        <input type="text" class="form-control" formControlName="logoEquipo"
+                        placeholder="Ingrese la URL del logo del equipo">                  
+                        <span *ngIf="campoValido('logoEquipo')" class="form-text text-danger">Campo obligatorio</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  gx-4  g-2 mb-3">
+                <span class="form-text text-danger">Se pueden agregar hasta 5 integrantes por equipo contando el lider</span>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Integrante 1</label>
+                        <input type="text" class="form-control" formControlName="integrante1"
+                        placeholder="Ingrese el nombre del integrante del equipo">  
+                        <span *ngIf="campoValido('integrante1')" class="form-text text-danger">Campo obligatorio. Minimo dos integrantes por equipo</span>
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Integrante 2</label>
+                        <input type="text" class="form-control" formControlName="integrante2"
+                        placeholder="Ingrese el nombre del integrante del equipo">  
+                        <span *ngIf="campoValido('integrante2')" class="form-text text-danger">Campo obligatorio.  Minimo dos integrantes por equipo</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row gx-4 g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Integrante 3</label>
+                        <input type="text" class="form-control" formControlName="integrante3"
+                        placeholder="Ingrese el nombre del integrante del equipo">  
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Integrante 4</label>
+                        <input type="text" class="form-control" formControlName="integrante4"
+                        placeholder="Ingrese el nombre del integrante del equipo">  
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-4 g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Integrante 5</label>
+                        <input type="text" class="form-control" formControlName="integrante5"
+                        placeholder="Ingrese el nombre del integrante del equipo">  
+                    </div>
+                </div>
+             
+            </div>
+            <div class="row gx-4 g-2  text-center">
+                <div class="">
+                    <button type="submit" [disabled]="miFormulario.invalid"  (click)="save()" class="btn btn_primary text-white-50">Registrar</button>
+                </div>
+            </div>
+            </form>
+    </div>
+</div>

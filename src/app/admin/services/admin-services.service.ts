@@ -15,7 +15,7 @@ export class AdminServicesService {
   }
 
   verTorneos(){
-    return this.http.get(`${this.URL}/torneos/getAll.php`);
+    return this.http.get(`${this.URL}torneos/getAll.php`);
   }
 
   registrarVideojuegos(videojuego:any){
@@ -26,5 +26,8 @@ export class AdminServicesService {
     return this.http.get(`${this.URL}/videojuegos/getAll.php`);
   }
 
+  
+
+  
  
 }

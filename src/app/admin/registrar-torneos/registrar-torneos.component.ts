@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AdminServicesService } from '../services/admin-services.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-registrar-torneos',
@@ -53,11 +54,31 @@ export class RegistrarTorneosComponent implements OnInit {
     this.SS.registrarTorneo(this.miFormulario.value).subscribe(
       (datos:any)=>{
         if(datos.resultado == 'OK'){
-          alert(datos.mensaje);
-          this.router.navigate(['ver-torneos']);
+          Swal.fire({
+            title: '¿Estas seguro de guardar los datos?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, guardar'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                datos.mensaje,
+                '',
+                'success'
+              )
+              this.router.navigate(['ver-torneos']);
+            }
+          })
 
         }else{
-          alert(datos.mensaje);
+          Swal.fire({
+            icon: 'info',
+            title: datos.mensaje,
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       });
   }
