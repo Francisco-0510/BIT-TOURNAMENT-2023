@@ -1,6 +1,6 @@
 .card{
     background-color: var(--black-secoond);
-    border-radius: 0px;
+    border-radius: 10px;
     border-left: 15px solid var(--green-primary);
 }
 .nameTorneo{

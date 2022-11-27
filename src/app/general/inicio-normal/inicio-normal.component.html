@@ -48,24 +48,12 @@
           VIDEOJUEGOS</a></li>
     </ul>
     <div class="col-md text-end">
-      <button type="button" routerLink="/login" class="btn btn-success mx-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-          <path fill-rule="evenodd"
-            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+      <button type="button" routerLink="/login" class="btn btn_primary mx-2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
         </svg>
-        Inicio</button>
-      <button type="button" routerLink="/login" class="btn btn-danger mx-2">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right"
-          viewBox="0 0 16 16">
-          <path fill-rule="evenodd"
-            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
-          <path fill-rule="evenodd"
-            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
-        </svg>
-        SALIR</button>
+        Iniciar Sesión</button>
+     
 
     </div>
   </nav>
@@ -76,8 +64,7 @@
       <h1 class="h1_large fw-bolder verde">Lorem ipsum dolor sit amet.</h1>
       <p class="p_large my-4 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, neque.</p>
       <div class="mb-auto">
-        <button class="btn btn_primary w-25 mx-2" type="button">Registrarme</button>
-        <button class="btn btn_secondary w-25 mx-2" type="button">Ver Más</button>
+        <button class="btn btn_primary w-50 mx-2 p-2" type="button">Demuestra tus Habilidades</button>
       </div>
     </div>
   </div>
@@ -89,8 +76,8 @@
 <!-- CONTENEDOR PARA 3 CARD DE INICIO NORMAL -->
 <div class="container text-start my-5 ">
   <h2 class="h2_large text-white  p-3">Juegos Destacados</h2>
-  <div class="container ">
-    <div class="row row-cols-1 row-cols-md-4 g-6">
+  <div class="container text-center">
+    <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-6">
       <div class="col">
         <div class="card bg-transparent border-0 h-100">
           <img src="https://s3.amazonaws.com/mlg-gamebattles-production/gb-games-images/5eefd920-ed2d-489c-855d-b542548a36df-300x400?v=1664387167" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
@@ -242,10 +229,10 @@
 </div>
 <!-- CONTENEDOR PAR CARD DE ENFREENTAMIENTOS PROXIOS -->
 <div class="container my-4  p-4">
-  <h2 class="h2_large pb-4">Proximos Enfrentamientos</h2>
+  <h2 class="h2_large pb-4 text-white">Proximos Enfrentamientos</h2>
   <div class="row mb-2 g-4">
     <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
+      <div class="row g-0 border-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
         <div class="col m-auto p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 verde text-uppercase">World</strong>
           <h4 class="h4_large mb-2 text-white">Nombre Enfrentamiento</h4>
@@ -268,7 +255,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
+      <div class="row g-0 border-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
         <div class="col m-auto p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 verde text-uppercase">World</strong>
           <h4 class="h4_large mb-2 text-white">Nombre Enfrentamiento</h4>
@@ -293,7 +280,7 @@
   </div>
   <div class="row mb-2 g-4">
     <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
+      <div class="row g-0 border-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
         <div class="col m-auto p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 verde text-uppercase">World</strong>
           <h4 class="h4_large mb-2 text-white">Nombre Enfrentamiento</h4>
@@ -316,7 +303,7 @@
       </div>
     </div>
     <div class="col-md-6">
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
+      <div class="row g-0 border-0 rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: #1E212A;">
         <div class="col m-auto p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 verde text-uppercase">World</strong>
           <h4 class="h4_large mb-2 text-white">Nombre Enfrentamiento</h4>
