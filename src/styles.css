@@ -121,7 +121,7 @@ a:hover{
 }
 
 /* ESTILOS PARA INPUTS, EN DONDE EL USUARIO INTRODUCIRA LOS DATOS CORRESPONDIENTES */
-input
+input,
 input[type="email"],
 input[type="text"],
 input[type="password"],
@@ -236,7 +236,7 @@ button[type="submit"]:disabled{
     line-height: 21px;
 }
 /* ESTILOS CONTENEDOR LOGIN */
- .container_login{
+/*  .container_login{
     background: #191919;
     align-items: stretch;
     border-radius: 10px;
@@ -258,7 +258,7 @@ button[type="submit"]:disabled{
     width: 100%;
     margin: auto;
     height: 35rem;
-} 
+}  */
 /* ESTILOS PARA EL ENCABEZADO DE HOME */
 /* .header_inicio{
     display: flex;
