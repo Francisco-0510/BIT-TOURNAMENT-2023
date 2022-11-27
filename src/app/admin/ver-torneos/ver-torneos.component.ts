@@ -23,5 +23,11 @@ export class VerTorneosComponent implements OnInit {
     });
   }
 
+  verTorneo(i:number){
+    this.router.navigate(['/detalle-torneo',i]);
+  
+ }
+
+
 
 }

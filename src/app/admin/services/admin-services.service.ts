@@ -26,6 +26,12 @@ export class AdminServicesService {
     return this.http.get(`${this.URL}/videojuegos/getAll.php`);
   }
 
+  verTorneo(id: number){
+    return this.http.get(`${this.URL}torneos/getOne.php?idTorneo=${id}`);
+  }
+  
+  
+
   
 
   

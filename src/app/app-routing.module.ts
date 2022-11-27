@@ -73,7 +73,7 @@ const routes: Routes = [
     component: DetalleEquiposComponent
   },
   {
-    path: 'detalle-torneo',
+    path: 'detalle-torneo/:id',
     component: DetalleTorneoComponent
   },
   {
