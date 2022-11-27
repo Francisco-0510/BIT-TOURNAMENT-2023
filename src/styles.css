@@ -138,6 +138,10 @@ input[type="time"],
     border: var(--grey-bg-inputs);
     color: var(--grey-text-inputs);
 }
+button[type="submit"]:disabled{
+    background-color: var(--grey-bg-inputs);
+    color: var(--grey-light);
+}
 #select, .form-select select, .form-select option{
     background: var(--grey-bg-inputs);
     color: var(--grey-light);

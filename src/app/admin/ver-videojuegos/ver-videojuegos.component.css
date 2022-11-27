@@ -9,8 +9,8 @@
     color: var(--green-primary);
 }
 .card img{
-    width: 100%;
-    min-height: 23rem;
+    max-width: 300px;
+    max-height: 225px;
 }
 .card p{
     font-family: var(--barlow);
