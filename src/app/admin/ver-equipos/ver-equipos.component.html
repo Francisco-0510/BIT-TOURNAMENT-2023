@@ -5,10 +5,29 @@
         <a routerLink="/editar-equipos" class="btn btn_primary">Registrar Equipo</a>
       </div>
       <!-- CARD PARA INFO PRINCIPAL DE EQUIPO -->
+     
+    <!-- CONTENEDOR PARA CARDS DE EQUIPOS -->
+    <div class="container my-4 ">
+        <div class="row gap-4 m-auto">
+            <div class="col-md-3 m-auto" *ngFor="let equipo of equipos">
+                <div class="card text-center bg-transparent border-1 border-light border-opacity-25 mx-auto" >
+                   <div class="card-header">
+                    <img src="{{equipo.logoEquipo}}" class="img-fluid card-img-top w-50" alt="">
+                   </div>
+                   <div class="card-body">
+                    <p class="p_normal "> <strong >Lider de Equipo</strong> {{equipo.lider}} </p>
+                    <h6 class="team_name">{{equipo.nombreEquipo}}</h6>
+                   </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
       <div class="container m-auto">
         <div class="row mx-4">
             <div class="col  " >
-                <div class="card bg-transparent border-light border-opacity-10 w-75 my-3 m-auto " *ngFor="let equipo of equipos" >
+                <div class="card bg-transparent border-light p-4 border-opacity-10 w- my-3 m-auto " *ngFor="let equipo of equipos" >
                     <div class="row g-0">
                       <div class="col-md-4 m-auto text-center">
                         <img src="{{equipo.logoEquipo}}" class="img-fluid w-50" alt="">

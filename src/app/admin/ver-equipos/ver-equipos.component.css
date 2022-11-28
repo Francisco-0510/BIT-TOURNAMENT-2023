@@ -1,5 +1,9 @@
-.card {
+/* .card {
     background-color: var(--black-secoond);
+} */
+img{
+    max-width: 300px;
+    max-height: auto;
 }
 .team_name{
     font-size: 28px;

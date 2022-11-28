@@ -2,12 +2,12 @@
 main{
     margin: 0;
     padding: 0;
-    top: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 80vh;
-    background-position: center start;
-    background-image: url("./../../../assets/wallpaper.png");
+    min-width: 100%;
+    min-height:100vh ;
+    background-position: center ;
+    background-image: url("https://pbs.twimg.com/media/Fh371YvXEAEwHqb?format=jpg&name=4096x4096");
 }
 .card-game .card-img-overlay h1, .card-img-overlay p {
     color: var(--white-color);  
