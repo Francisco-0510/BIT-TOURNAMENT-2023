@@ -37,3 +37,12 @@ main{
     background-color: var(--bg-grey);
     color: var(--green-primary);
 }
+#useful-links 
+li a{
+    color: var(--grey-light);
+}
+#useful-links 
+li a:hover{
+    color: var(--green-primary);
+    background: none;
+}

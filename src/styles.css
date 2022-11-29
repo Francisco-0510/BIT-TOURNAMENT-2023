@@ -30,6 +30,9 @@
     --bg-grey: #1E212A;
     
 }
+.bg-footer{
+    background-color: var(--black-secoond);
+}
 .verde{
     color: var(--green-primary);
 }
@@ -85,8 +88,6 @@ a:hover{
 }
 
 .nav-link:hover{
-    text-decoration: underline 2px var(--green-primary);
-    text-underline-offset: 5px;
     color: var(--black-bg-primary);
     background-color: var(--green-primary);
 }
@@ -127,6 +128,7 @@ input[type="text"],
 input[type="password"],
 input[type="date"],
 input[type="time"],
+input[type="submit"],
 #textarea{
     background: var(--grey-bg-inputs);
     padding: 10px 20px;
