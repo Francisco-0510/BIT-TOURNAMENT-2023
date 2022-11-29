@@ -9,6 +9,14 @@ main{
     background-position: center ;
     background-image: url("https://pbs.twimg.com/media/Fh371YvXEAEwHqb?format=jpg&name=4096x4096");
 }
+.container-demuestra{
+    background-color: var(--bg-grey);
+    margin: 0;
+    width: 100%;
+    border: 0;
+    padding: 10px 0px;
+}
+
 .card-game .card-img-overlay h1, .card-img-overlay p {
     color: var(--white-color);  
     font-weight: bolder;
@@ -20,7 +28,7 @@ main{
 .card-game:hover img{
     filter: grayscale(0%) brightness(45%);
 }
-.card-game .card-img-overlay:hover h1{
+.card-game .card-img-overlay:hover h4 {
     color: var(--green-primary);
 }
 .card .card-vs{
@@ -33,7 +41,16 @@ main{
     background-color: #181a22;
     color: var(--green-primary);
 }
-.list-group-item:hover{
+ .list-group-item:hover p{
     background-color: var(--bg-grey);
     color: var(--green-primary);
+}
+#useful-links 
+li a{
+    color: var(--grey-light);
+}
+#useful-links 
+li a:hover{
+    color: var(--green-primary);
+    background: none;
 }
