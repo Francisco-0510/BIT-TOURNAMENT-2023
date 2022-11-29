@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminServicesService } from '../services/admin-services.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-ver-torneos',
@@ -9,11 +10,15 @@ import { AdminServicesService } from '../services/admin-services.service';
 })
 export class VerTorneosComponent implements OnInit {
   torneos: any;
-
-  constructor(private AS: AdminServicesService, private router: Router) { }
+  usuario = {
+    nombre: ''
+  }
+  constructor(private AS: AdminServicesService, private router: Router, private CS: CookieService) { }
 
   ngOnInit(): void {
     this.obtenerTorneos();
+    this.usuario.nombre = this.CS.get('nombre');
+    console.log(this.usuario);
   }
 
   obtenerTorneos(){

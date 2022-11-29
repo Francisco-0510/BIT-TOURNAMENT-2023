@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicesloginService } from 'src/app/login/serviceslogin.service';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-login',
@@ -29,7 +32,7 @@ export class LoginComponent implements OnInit {
     contrasenia: ['',[Validators.required, Validators.minLength(6)]]
   });
   
-  constructor(private loginService: ServicesloginService, private FB: FormBuilder) { }
+  constructor(private loginService: ServicesloginService, private FB: FormBuilder, private router: Router, private CS: CookieService) { }
 
   ngOnInit(): void {
     this.miform.setValue({
@@ -44,9 +47,10 @@ export class LoginComponent implements OnInit {
       (datos:any)=>{
         if(datos.resultado == 'OK'){
           alert(datos.mensaje);
+          this.CS.set('nombre',datos.nombre);
+          this.router.navigate(['ver-torneos']);
         }else{
           alert(datos.mensaje);
-
         }
       });
   }

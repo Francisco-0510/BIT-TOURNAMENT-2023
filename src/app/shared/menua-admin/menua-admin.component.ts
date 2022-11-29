@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-menua-admin',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuaAdminComponent implements OnInit {
 
-  constructor() { }
+  constructor( private CS: CookieService, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  logOut(){
+    this.CS.deleteAll();
+    this.router.navigate(['/login']);
+
+
   }
 
 }
