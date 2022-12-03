@@ -34,7 +34,7 @@
 }
 .bg-footer{
     background-color: var(--black-secoond);
-}
+}   
 .verde{
     color: var(--green-primary);
 }
@@ -81,11 +81,9 @@ a:hover{
     font-family: var(--bebas-font);
     line-height: 1.5;
     text-align: center;
-    margin: .25rem .125rem;
     letter-spacing: 1px;
     font-size: 18px;
-    display: flexbox;
-    box-sizing: border-box;
+    border: 0;
     border-radius: 2px;
 }
 
@@ -142,6 +140,7 @@ input[type="submit"],
     border: var(--grey-bg-inputs);
     color: var(--grey-text-inputs);
 }
+
 button[type="submit"]:disabled{
     background-color: var(--grey-bg-inputs);
     color: var(--grey-light);
@@ -172,13 +171,13 @@ button[type="submit"]:disabled{
 
     color: var(--green-primary);}
 .h1_large{
-    font-family: var(--poppins1q    -font);
-    font-weight: bolder;
-    letter-spacing: 4.44px;
+    font-family: var(--poppins-font);
+    font-weight: 800;
+    letter-spacing: 4px;
     text-transform:uppercase ;
     line-height: 1.041em;
-    font-size: 74px;
-    color: var(--green-primary);
+    font-size: 94px;
+    color: var(--white-color);
 }
 .h2_large{
     font-size: 36px;
@@ -243,7 +242,14 @@ button[type="submit"]:disabled{
     font-weight: 400px;
     line-height: 21px;
 }
-
+.sub-header{
+    font-size:20px;
+    letter-spacing: 2px;
+    font-family: var(--poppins-font);
+    color: var(--white-color);
+    font-weight: 500;
+    text-transform: uppercase;
+}
 .match-container{
     display: block;
     width: 1220px;

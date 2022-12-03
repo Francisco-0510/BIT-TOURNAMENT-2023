@@ -2,9 +2,9 @@
 
 -->
 <!-- CONTENDEDOR PARA HEADER DE WELCOME USUARIO NORMAL -->
-  <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between fixed-top bg-dark py-2  mb-2 px-1 ">
+  <nav class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between fixed-top bg-footer py-2  mb-2 px-4 ">
     <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none">
-      <img src="https://congresobit.com/wp-content/uploads/2022/02/bit-letrasblancas-1536x742-blanco-1024x495.png" alt="" class="w-25 mx-2">
+      <img src="../../../assets/imagenes/logoBITMX.png" alt="" class="w-25 ">
     </a>
     <ul class="nav  navbar-expand col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a routerLink="/inicio-normal" class="nav-link ">
@@ -46,7 +46,7 @@
           VIDEOJUEGOS</a></li>
     </ul>
     <div class="col-md text-end">
-      <button type="button" routerLink="/login" class="btn btn_primary mx-2">
+      <button type="button" routerLink="/login" class="btn btn_primary ">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
           <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
         </svg>
@@ -56,17 +56,18 @@
     </div>
   </nav>
 
-<main class="d-flex w-100 h-100 mx-0 pe-auto">
-  <div class="position-relative overflow-hidden welcome m-auto  d-flex h-100 text-center ">
-    <div class=" m-auto ">
-      <h1 class="h1_large fw-bolder verde">BIT 2023 Tournament</h1>
-      <p class="p_large  my-4 text-white fw-bold">Vive la experiencia del competitivo en el BIT Tournament 2023</p>
-      <div class="mb-auto">
-        <button class="btn btn_primary w-25 mx-2 p-2" type="button">Demuestra tus Habilidades</button>
+  <div class="welcome d-flex   h-100 m-0 p-0 " >
+    <div class="cover-container  d-flex w-100 h-100 p-3 m-auto flex-column">
+      <div class=" m-auto text-center ">
+        <img src="../../../assets/imagenes/logoBITMX.png" alt="" class="img-fluid mb-auto w-25">
+        <h1 class="h1_large fw-bolder my-4 "> 2023 Tournament</h1>
+        <p class="sub-header fw-bold  my-4">Vive la experiencia del competitivo en el BIT Tournament 2023.</p>
+          <button class="btn btn_primary w-25 mt-auto p-2" type="button">Demuestra tus Habilidades</button>
       </div>
     </div>
   </div>
-</main>
+
+
 
 
 
@@ -78,7 +79,7 @@
     <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-6">
       <div class="col">
         <div class="card bg-transparent border-0 h-100">
-          <img src="https://s3.amazonaws.com/mlg-gamebattles-production/gb-games-images/5eefd920-ed2d-489c-855d-b542548a36df-300x400?v=1664387167" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
+          <img src="../../../assets/imagenes/imgGames/codmw_Cover.jfif" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
           <div class="card-footer text-center">
           <a href="" class="btn_link">  <small class="text-muted" >Last updated 3 mins ago</small></a>
           </div>
@@ -86,7 +87,7 @@
       </div>
       <div class="col">
         <div class="card bg-transparent border-0 h-100">
-          <img src="https://s3.amazonaws.com/mlg-gamebattles-production/gb-games-images/0ade3a50-dcac-432c-9dd8-022215194130-300x400?v=1665180073" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
+          <img src="../../../assets/imagenes/imgGames/overwatch_Cover.jfif" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
           <div class="card-footer text-center">
           <a href="" class="btn_link">  <small class="text-muted" >Last updated 3 mins ago</small></a>
           </div>
@@ -94,7 +95,7 @@
       </div>
       <div class="col">
         <div class="card bg-transparent border-0 h-100">
-          <img src="https://s3.amazonaws.com/mlg-gamebattles-production/gb-games-images/968cb09e-96b6-4e5f-aeec-0884f3a7b5b5-300x400?v=1570028677" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
+          <img src="../../../assets/imagenes/imgGames/codM_Cover.png" style="max-height: 300px; max-width: 225px;" class="m-auto img-fluid" alt="...">
           <div class="card-footer text-center">
           <a href="" class="btn_link">  <small class="text-muted" >Last updated 3 mins ago</small></a>
           </div>
@@ -119,8 +120,8 @@
 
 <!--  -->
 <div class=" col-xxl-12   my-4 container-demuestra ">
-  <div class="row flex-lg-row-reverse align-items-center  ">
-    <div class="col-10 col-sm-8 col-lg-6 px-4">
+  <div class="row flex-lg-row-reverse align-items-center px-0 m-0">
+    <div class="col-10 col-sm-8 col-lg-6 ">
       <h2 class="h2_large fw-bold lh-1 pt-4 mb-3 verde">Demuestra tu potencial</h2>
       <p class="p_normal">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
       <div class="list-group w-auto pb-3">
@@ -177,8 +178,11 @@
         </a>
       </div>
     </div>
-    <div class="col-lg-6 ">
-      <img src="https://gamebattles.majorleaguegaming.com/gb-web/assets/homepage/hero1.png" class=" w-100 h-100" alt="Bootstrap Themes" loading="lazy">
+    <div class="col-lg-6 m-0 p-0 ">
+      <!-- <img src="https://gamebattles.majorleaguegaming.com/gb-web/assets/homepage/hero1.png" class=" w-100 h-100" alt="Bootstrap Themes" loading="lazy"> -->
+      <div class="ratio ratio-16x9" muted>
+        <video class="h-100" poster="../../../assets/imagenes/posterVidPootencial.jpg" preload="auto" role="presentation" [volume]="0" crossorigin="anonymous" muted loop  tabindex="-1" autoplay="true" playsinline src="../..//../assets/imagenes/videoPotencial.mp4" type="video/mp4" ></video>
+      </div>
       
     </div>
   </div>

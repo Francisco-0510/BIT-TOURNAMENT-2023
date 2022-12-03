@@ -1,9 +1,10 @@
 /* .card {
     background-color: var(--black-secoond);
 } */
+
 img{
-    max-width: 300px;
-    max-height: auto;
+    max-width: 200px;
+    max-height: 250px;
 }
 .team_name{
     font-size: 28px;
