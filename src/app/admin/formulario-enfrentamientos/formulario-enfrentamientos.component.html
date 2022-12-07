@@ -1,0 +1,75 @@
+<app-menua-admin></app-menua-admin>
+
+<div class="container text-center m-auto pt-5 ">
+    <div class="card container_form border-0  my-5 pt-5">
+        <h3 *ngIf="idE" class="h3_large mb-0  verde">Actualizar Enfrentamiento</h3>
+    <h3  [hidden]="idE" class="h3_large mb-0  verde">Registrar Enfrentamiento</h3>
+        <form autocomplete="off" class="row align-items-center text-start py-1 px-4" [formGroup]="miFormulario" >
+            <div class=" row gx-4 g-2 mb-3 ">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Seleccione el primer equipo</label>
+                        <select  class="form-select "  id="select"  formControlName="equipo1">
+                            <option selected value="">Selecciona un equipo</option>
+                            <option *ngFor="let equipos of equiposIns" value="{{equipos.equipoInscrito}}">{{equipos.equipoInscrito}}</option>
+                          </select>
+                        <span *ngIf="campoValido('equipo1')" class="form-text text-danger">Campo obligatorio</span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Seleccione el segundo equipo</label>
+                        <select  class="form-select "  id="select"  formControlName="equipo2">
+                            <option selected value="">Selecciona un equipo</option>
+                            <option *ngFor="let equipos of equiposIns" value="{{equipos.equipoInscrito}}">{{equipos.equipoInscrito}}</option>
+                          </select>
+                        <span *ngIf="campoValido('equipo2')" class="form-text text-danger">Campo obligatorio</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row  gx-4  g-2 mb-3" *ngIf="idE" >
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Resultado equipo 1</label>
+                        <input type="number" min="0" placeholder="Resultados del equipo 1 " class="form-control" formControlName="resultadoEquipo1" >
+                        <span class="form-text text-danger">Solo numeros</span>
+
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white text-left">Resultado equipo 2</label>
+                        <input type="number" min="0" placeholder="Resultados del equipo 2 " class="form-control" formControlName="resultadoEquipo2" >
+                        <span class="form-text text-danger">Solo numeros</span>
+
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="row  gx-4  g-2 mb-3" *ngIf="idE" >
+                
+                <div class="col-md">
+                    <div class="mb-6">
+                        <label  class="form-label text-white text-left">Seleccione el ganador de la ronda</label>
+                        <select  class="form-select "  id="select"  formControlName="ganador">
+                            <option selected value="">Selecciona un equipo</option>
+                            <option *ngFor="let equipos of equiposIns" value="{{equipos.equipoInscrito}}">{{equipos.equipoInscrito}}</option>
+                          </select>
+                    </div>
+                </div>
+            </div>
+            <input hidden  type="text" formControlName="idTorneo" value="{{enfrentamiento.idTorneo}}">
+            <input  hidden class="form-control" formControlName="idEnfrentamiento"  type="text">
+
+
+            <div class="row gx-4 g-2  text-center">
+                <div class="">
+
+                    <button    type="submit" [disabled]="miFormulario.invalid"  (click)="save()" class="btn btn-success text-white-50">Registrar</button>
+                </div>
+            </div>
+            </form>
+    </div>
+</div>

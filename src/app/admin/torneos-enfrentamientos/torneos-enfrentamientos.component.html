@@ -1,0 +1,55 @@
+<app-menua-admin></app-menua-admin>
+
+<div class="container my-5 pt-5">
+    
+
+      <!-- CONTENEDOR PARA VER LOS ENFRENTAMIENTOS -->
+      <div class="container my-4 p-4">
+        <h2 class="h2_large verde">Consulta los enfrentamientos de cada Torneo </h2>
+        <div  *ngFor="let torneo of torneos" class="match-container">
+            <a (click)="verTorneo(torneo.idTorneo)" >
+
+          <div class="match-items">
+            <div class="card_match">
+              <div class="match_main">
+                <div class="match-left">
+                  <img src="{{torneo.url}}" loading="lazy" alt="" class="img-fluid">
+                  
+                 
+                  <div class="match-text-wrap">
+                    <div class="match-text">
+                      <div class="match-text-vs">{{torneo.nombreTorneo}}</div>
+                    </div>
+                  </div>
+            
+                </div>
+                <div class="match-right">
+                    <div class="match-torneo">
+                      <div class="text-block-17">{{torneo.fecha  | date}}</div>
+                    </div>
+                    <div class="match-torneo">
+                      </div>
+                    <div class="match-dates">
+                      <div class="match-day"></div>
+                      <div class="match-time">{{torneo.hora}}</div>
+                    </div>
+                    <div class="match-watch">
+                      <img src="https://global-uploads.webflow.com/5dfb7057d19f96ef2358783c/606e94d55eb2ba96f2183e34_play_svg.svg" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </a>
+
+        </div>
+        <div class="row my-auto">
+          <div class="col-md-12">
+           
+          </div>
+        </div>
+
+</div>
+
+

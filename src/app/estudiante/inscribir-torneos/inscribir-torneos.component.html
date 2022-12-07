@@ -1,0 +1,33 @@
+<p>inscribir-torneos works!</p>
+
+<div class="container pt-5 my-5">
+    <div class="card w-75 m-auto bg-dark text-center  p-4">
+        <div class="card-header text-start">
+            <h2  class="h2_large py-2 verde">Inscribite al torneo</h2>
+            <h3  class="h2_large py-2 verde">Solo coloca el nombre de tu equipo</h3>
+        </div>
+        <div class="card-body container_form">
+            <form autocomplete="off" class="row align-items-center" [formGroup]="miFormulario">
+                <div class=" row gx-4 g-2 mb-3 ">
+                    <div class="col-md">
+                        <div class="mb-6">
+                            <input type="text" class="form-control" formControlName="equipoInscrito"
+                                placeholder="Ingrese el nombre de tu equipo">
+                            <span *ngIf="campoValido('equipoInscrito')" class="form-text text-danger">
+                                Campo obligatorio</span>
+                        </div>
+                    </div>
+                    <input hidden  type="text" formControlName="idTorneo" value="{{torneo.idTorneo}}">
+                </div>
+              
+                <div class="row gx-4 g-2 mb-3 text-center">
+                    <div class="">
+
+                        <button class="btn btn_primary " type="submit" [disabled]="miFormulario.invalid" (click)="save()">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+</div>

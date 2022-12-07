@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ClientServicesService } from 'src/app/services/client-services.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-editar-equipos',
@@ -46,14 +47,25 @@ export class EditarEquiposComponent implements OnInit {
   }
 
   save(){
+
+
     console.log(this.miFormulario.value);
     this.SS.registrarEquipo(this.miFormulario.value).subscribe(
       (datos:any)=>{
         if(datos.resultado == 'OK'){
-          alert(datos.mensaje);
+          Swal.fire({
+            icon: 'success',
+            title: datos.mensaje,
+            showConfirmButton: false,
+            timer: 1500
+          })
           this.router.navigate(['ver-equipos']);
         }else{
-          alert(datos.mensaje);
+          Swal.fire({
+            icon: 'error',
+            title: datos.mensaje,
+            showConfirmButton: true,
+          })
         }
       });
   }

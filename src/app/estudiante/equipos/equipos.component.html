@@ -1,0 +1,26 @@
+<app-menu-estudiante></app-menu-estudiante>
+
+<div class="container my-4 pt-5">
+    <div class="container d-flex align-items-end flex-column my-4">
+        <a routerLink="/editar-equipos" class="btn btn_primary">Registrar Equipo</a>
+      </div>
+      <!-- CARD PARA INFO PRINCIPAL DE EQUIPO -->
+     
+    <!-- CONTENEDOR PARA CARDS DE EQUIPOS -->
+    <div class="container my-4 ">
+        <div class="row gap-4 ">
+            <div class="col-3 g-1 m-auto" *ngFor="let equipo of equipos">
+                <div class="card  h-100 p-2 text-start bg-transparent border-1 border-light border-opacity-25 mx-auto" >
+                    <img src="{{equipo.logoEquipo}}" class="card-img-top m-auto " alt="">
+                   <div class="card-body">
+                  <p class="p_small text-white "> <strong>{{equipo.nombreEquipo}}</strong></p> 
+                    <p class="p_small text-white "> <strong >Lider de Equipo: </strong> {{equipo.lider}} </p>
+                    <p class="p_second text-white "> <strong >Integrantes: </strong> {{equipo.integrante1}}, {{equipo.integrante2}}, {{equipo.integrante3}}, {{equipo.integrante4}}, {{equipo.integrante5}} </p>
+                   </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+     

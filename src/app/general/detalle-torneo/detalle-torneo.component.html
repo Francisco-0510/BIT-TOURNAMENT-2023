@@ -14,7 +14,7 @@
           <div class="card p-4  bg-dark">
               <div class="row">
                 <div class="col-md-4 text-center p-0">
-                  <img src="https://s3.amazonaws.com/mlg-gamebattles-production/gb-games-images/5eefd920-ed2d-489c-855d-b542548a36df-300x400?v=1664387167" class="img-fluid rounded-start w-50" alt="...">
+                  <img src="{{torneo.url}}"  class="img-fluid rounded-start w-50" alt="...">
                 </div>
                 <div class="col-md-8 text-start m-auto">
                   <small class="text-white">Torneo</small>
@@ -36,7 +36,7 @@
             </div>
             <div class="card-body">
               <p class="p_normal text-white-50"> <strong>Descripción: </strong> {{torneo.descripcion}} </p>
-              <p class="p_normal text-white-50"> <strong>Fecha: </strong> {{torneo.fecha}} </p>
+              <p class="p_normal text-white-50"> <strong>Fecha: </strong> {{torneo.fecha | date}} </p>
               <p class="p_normal text-white-50"> <strong>Hora: </strong> {{torneo.hora}} </p>
             </div>
           </div>
@@ -49,44 +49,10 @@
 
             </div>
             <div class="card-body">
-              <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingOne">
-                    <button class="accordion-button fw-bold bg-dark text-white collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                      Regla #1
-                    </button>
-                  </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                
                     <div class="accordion-body text-bg-dark">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident odio sunt dignissimos illum totam, repudiandae quisquam similique nam. Nihil libero enim adipisci consectetur, et eaque illum! Voluptatem ipsam rerum quia eum. Cum delectus dolore aspernatur ab, quidem, esse voluptatibus culpa placeat necessitatibus tempora hic quisquam omnis fugiat nobis, asperiores laudantium voluptatum aperiam quas! Consectetur enim at molestias expedita. Dolor ratione, consectetur ea commodi sunt praesentium sapiente aut culpa dicta eveniet perferendis corrupti vitae fugiat dolores reiciendis eum quidem corporis totam. Corrupti quos quasi illum assumenda earum modi architecto culpa voluptatum maxime recusandae et cupiditate, corporis ut ipsa maiores ea esse?
+                      {{torneo.reglas}}
                     </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingTwo">
-                    <button class="accordion-button fw-bold text-bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                      Regla #2
-                    </button>
-                  </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body text-bg-dark">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident odio sunt dignissimos illum totam, repudiandae quisquam similique nam. Nihil libero enim adipisci consectetur, et eaque illum! Voluptatem ipsam rerum quia eum. Cum delectus dolore aspernatur ab, quidem, esse voluptatibus culpa placeat necessitatibus tempora hic quisquam omnis fugiat nobis, asperiores laudantium voluptatum aperiam quas! Consectetur enim at molestias expedita. Dolor ratione, consectetur ea commodi sunt praesentium sapiente aut culpa dicta eveniet perferendis corrupti vitae fugiat dolores reiciendis eum quidem corporis totam. Corrupti quos quasi illum assumenda earum modi architecto culpa voluptatum maxime recusandae et cupiditate, corporis ut ipsa maiores ea esse?
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button fw-bold text-bg-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                      Regla #3
-                    </button>
-                  </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body text-bg-dark">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident odio sunt dignissimos illum totam, repudiandae quisquam similique nam. Nihil libero enim adipisci consectetur, et eaque illum! Voluptatem ipsam rerum quia eum. Cum delectus dolore aspernatur ab, quidem, esse voluptatibus culpa placeat necessitatibus tempora hic quisquam omnis fugiat nobis, asperiores laudantium voluptatum aperiam quas! Consectetur enim at molestias expedita. Dolor ratione, consectetur ea commodi sunt praesentium sapiente aut culpa dicta eveniet perferendis corrupti vitae fugiat dolores reiciendis eum quidem corporis totam. Corrupti quos quasi illum assumenda earum modi architecto culpa voluptatum maxime recusandae et cupiditate, corporis ut ipsa maiores ea esse?
-                    </div>
-                  </div>
-                </div>
-              </div>
 
             </div>
           </div>
@@ -101,16 +67,20 @@
             <div class="card-body">
               <div class="detalleT">
                 <div class="TorneoD">
-                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Precio</label>
-                  <span class="text-white fw-bold">Gratis</span>
+                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Precio: </label>
+                  <span class="text-white fw-bold">{{torneo.precio  | currency}}</span>
                 </div>
                 <div class="TorneoD">
-                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Tipo de Torneo</label>
-                  <span class="text-white fw-bold">Gratis</span>
+                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Tipo de Torneo:  </label>
+                  <span class="text-white fw-bold">{{torneo.tipoTorneo}}</span>
                 </div>
                 <div class="TorneoD">
-                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Tamaño del Equipo</label>
-                  <span class="text-white fw-bold">Gratis</span>
+                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Tamaño del Equipo: </label>
+                  <span class="text-white fw-bold">{{torneo.tamanoEquipo}} Integrantes</span>
+                </div>
+                <div class="TorneoD">
+                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Organizador del torneo</label>
+                  <span class="text-white fw-bold">{{torneo.encargado}}</span>
                 </div>
                 <div class="TorneoD">
                   <label for=""  style="color: rgba(255, 255, 255, 0.5);">
@@ -119,55 +89,24 @@
                       <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
                     </svg> Recompensa
                   </label>
-                  <span class="text-white fw-bold">Gratis</span>
+                  <span class="text-white fw-bold"> {{torneo.recompensa}}</span>
                 </div>
-                <a href="{{torneo.url}}" class="btn border-1 border-light border-opacity-25 twitch">Ver Torneo</a>
+                <div class="TorneoD">
+                  <label for=""  style="color: rgba(255, 255, 255, 0.5);">Ver Transmisión</label>
+                  <a href="{{torneo.urlT}}" target="_blank" class="btn twitch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitch" viewBox="0 0 16 16">
+                      <path d="M3.857 0 1 2.857v10.286h3.429V16l2.857-2.857H9.57L14.714 8V0H3.857zm9.714 7.429-2.285 2.285H9l-2 2v-2H4.429V1.143h9.142v6.286z"/>
+                      <path d="M11.857 3.143h-1.143V6.57h1.143V3.143zm-3.143 0H7.571V6.57h1.143V3.143z"/>
+                    </svg>
+                    Ir a Twitch</a>
+
+                </div>
               </div>
             </div>
           </div>
-          <div class="card mb-2 bg-dark">
-            <div class="card-header text-center">
-              <h6 class="h6_large text-white">
-                Organizador del Torneo
-              </h6>
-            </div>
-            <div class="card-body text-center">
-              <figure class="figure">
-                <img src="https://prium.github.io/phoenix/v1.6.0/assets/img//team/65.png" class="figure-img img-fluid rounded-circle" alt="...">
-                <figcaption class="figure-caption fw-bold text-white ">{{torneo.encargado}}</figcaption>
-              </figure>
-            </div>
-          </div>
+         
         </div>
       </div>
     </div>
-   <!--  <div class="container my-4">
-        <div class="row">
-            <div class="col-8 text-start m-auto ">
-                <div class="card mb-3 bg-dark w-100" >
-                    <div class="row g-0">
-                      <div class="col-md-4">
-                        <img src="https://s3.amazonaws.com/mlg-gamebattles-production/gb-games-images/5eefd920-ed2d-489c-855d-b542548a36df-300x400?v=1664387167" class="img-fluid rounded-start" alt="...">
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h6 class="card-title h6_large verde">{{torneo.nombreTorneo}}</h6>
-                          <h6 class="card-title h6_large verde">{{torneo.idVideojuego}}</h6>
-                          <h6 class="card-title h6_large verde">{{torneo.encargado}}</h6>
-                          <h6 class="card-title h6_large verde">{{torneo.recompensa}}</h6>
-                          <h6 class="card-title h6_large verde">{{torneo.descripcion}}</h6>
-                          <h6 class="card-title h6_large verde">{{torneo.activo}}</h6>
-                          <h6 class="card-title h6_large verde">{{torneo.fecha}}</h6>    
-                          <h6 class="card-title h6_large verde">{{torneo.hora}}</h6>       
-                          <h6 class="card-title h6_large verde">{{torneo.url}}</h6>       
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-          
-        </div>
-    </div>
- -->
+ 
 </div>

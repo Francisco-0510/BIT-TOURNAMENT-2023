@@ -2,8 +2,9 @@
 
 <div class="container text-center m-auto pt-5 ">
     <div class="card container_form border-0  my-5 pt-5">
-    <h3 class="h3_large mb-0  verde">Registrar Torneo</h3>
-    <p class="p_second">Rellena el formulario para agregar un nuevo videojuego</p>
+        <h3 *ngIf="id" class="h3_large mb-0  verde">Actualizar Torneo</h3>
+    <h3 [hidden]="id"  class="h3_large mb-0  verde">Registrar Torneo</h3>
+    <p [hidden]="id" class="p_second">Rellena el formulario para agregar un nuevo videojuego</p>
         <form autocomplete="off" class="row align-items-center text-start py-1 px-4" [formGroup]="miFormulario" >
             <div class=" row gx-4 g-2 mb-3 ">
                 <div class="col-md">
@@ -31,7 +32,8 @@
                 <div class="col-md">
                     <div class="mb-3">
                         <label  class="form-label text-white text-left">Describe la recompensa para el ganador</label>
-                        <textarea id="textarea" class="form-control" rows="3" formControlName="recompensa"></textarea>
+                        <input type="text" class="form-control" formControlName="recompensa" >
+
                         <span *ngIf="campoValido('recompensa')" class="form-text text-danger">Campo obligatorio</span>
 
                     </div>
@@ -39,7 +41,7 @@
                 <div class="col-md">
                     <div class="mb-3">
                         <label class="form-label text-white text-left">Descripción del torneo</label>
-                        <textarea id="textarea" class="form-control" formControlName="descripcion" rows="3"></textarea>
+                        <input type="text" class="form-control" formControlName="descripcion" >
                         <span *ngIf="campoValido('descripcion')" class="form-text text-danger">Campo obligatorio</span>
 
                     </div>
@@ -50,7 +52,7 @@
                 <div class="col-md">
                     <div class="mb-3">
                         <label  class="form-label text-white text-left">Fecha del torneo</label>
-                        <input type="date" class="form-control" formControlName="fecha">
+                        <input min="today"  type="date" class="form-control" formControlName="fecha">
                         <span *ngIf="campoValido('fecha')" class="form-text text-danger">Campo obligatorio</span>
 
                     </div>
@@ -76,16 +78,57 @@
                 <div class="col-md">
                     <div class="mb-3">
                         <label  class="form-label text-white ">Canal de Transmisión</label>
-                        <input type="text" class="form-control" formControlName="url"
+                        <input type="text" class="form-control" formControlName="urlT"
                             placeholder="Ingrese la URL del canal de Twitch">
-                        <span  *ngIf="campoValido('url')" class="form-text text-danger" >Campo obligatorio</span>
+                        <span  *ngIf="campoValido('urlT')" class="form-text text-danger" >Campo obligatorio</span>
                     </div>
                 </div>
+            </div>
+            <div class="row gx-4 g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white ">Precio de Inscripcion</label>
+                        <input type="number" min="0" max="1000" class="form-control" formControlName="precio"
+                            placeholder="Ingrese el precio del torneo ">
+                        <span  *ngIf="campoValido('precio')" class="form-text text-danger" >Campo obligatorio. Solo numeros</span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white ">Tamaño de Equipos</label>
+                        <input type="number" min="0" max="5" class="form-control" formControlName="tamanoEquipo"
+                            placeholder="Ingrese el numero de tamaño del Equipo">
+                        <span  *ngIf="campoValido('tamanoEquipo')" class="form-text text-danger" >Campo obligatorio. Solo numeros</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row gx-4 g-2 mb-3">
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white ">Reglas del Torneo</label>
+                        <textarea type="text" class="form-control" formControlName="reglas" cols="25" rows="4"></textarea>
+                        <span  *ngIf="campoValido('reglas')" class="form-text text-danger" >Campo obligatorio</span>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="mb-3">
+                        <label  class="form-label text-white ">Tipo de Torneo</label>
+                        <select  class="form-select "  id="select"  formControlName="tipoTorneo">
+                            <option value="Presencial">Presencial</option>
+                            <option  value="Virtual">Virtual</option>
+                          </select>
+                        <span  *ngIf="campoValido('tipoTorneo')" class="form-text text-danger" >Campo obligatorio</span>
+                    </div>
+                </div>
+                <input hidden class="form-control" formControlName="idTorneo"  type="text">
+
             </div>
             <input type="text" class="form-control" formControlName="activo" hidden>
             <div class="row gx-4 g-2  text-center">
                 <div class="">
-                    <button type="submit" [disabled]="miFormulario.invalid"  (click)="save()" class="btn btn_primary text-white-50">Registrar</button>
+                    <button *ngIf="id" type="submit" class="btn btn-success" (click)="save()">Actualizar</button>
+
+                    <button  [hidden]="id"  type="submit" [disabled]="miFormulario.invalid"  (click)="save()" class="btn btn-success text-white-50">Registrar</button>
                 </div>
             </div>
             </form>

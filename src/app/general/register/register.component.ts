@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router';
 import { ServicesloginService } from 'src/app/login/serviceslogin.service';
 
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-register',
@@ -24,8 +25,8 @@ export class RegisterComponent implements OnInit {
   }
     
     miFormulario: FormGroup = this.fb.group({
-      nombre: ['',[Validators.required]],
-      apellidos: ['',[Validators.required]],
+      nombre: ['',[Validators.required, Validators.minLength(6),Validators.maxLength(25) ]],
+      apellidos: ['',[Validators.required,  Validators.minLength(6),Validators.maxLength(35)]],
       usuario: ['',[Validators.required]],
       contrasenia: ['',[Validators.required, Validators.minLength(6)]],
       tipoUser: ['',[Validators.required]],
@@ -54,9 +55,21 @@ export class RegisterComponent implements OnInit {
       this.SS.registro(this.miFormulario.value).subscribe(
         (datos:any)=>{
           if(datos.resultado == 'OK'){
-            alert(datos.mensaje);
+            Swal.fire({
+              icon: 'success',
+              title: datos.mensaje,
+              showConfirmButton: false,
+              timer: 1500
+            })
+            this.router.navigate(['login']);
           }else{
-            alert(datos.mensaje);
+            Swal.fire({
+              icon: 'error',
+              title: datos.mensaje,
+              text: 'Intenta nuevamente',
+              showConfirmButton: false,
+              timer: 1500
+            })
   
           }
         });

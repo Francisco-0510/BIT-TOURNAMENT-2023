@@ -4,6 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-login',
@@ -45,12 +46,34 @@ export class LoginComponent implements OnInit {
     console.log(this.miform.value);
     this.loginService.loginUsuarios(this.miform.value).subscribe(
       (datos:any)=>{
-        if(datos.resultado == 'OK'){
-          alert(datos.mensaje);
+        if(datos.tipo == 1){
+          Swal.fire({
+            icon: 'success',
+            title: 'Login Correcto',
+            text: 'Has ingresado como estudiante',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          this.CS.set('nombre',datos.nombre);
+          this.router.navigate(['estudiante-torneo']);
+        }else if (datos.tipo == 2) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Login Correcto',
+            text: 'Has ingresado como administrador',
+            showConfirmButton: false,
+            timer: 1500
+          })
           this.CS.set('nombre',datos.nombre);
           this.router.navigate(['ver-torneos']);
-        }else{
-          alert(datos.mensaje);
+
+        }
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Algo salio mal',
+            text: datos.mensaje,
+          })
         }
       });
   }

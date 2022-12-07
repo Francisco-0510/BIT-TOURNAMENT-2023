@@ -1,0 +1,50 @@
+<app-menu-estudiante></app-menu-estudiante>
+
+<div class="container my-5 pt-5">
+   
+
+      <!-- CONTENEDOR PARA VER LOS ENFRENTAMIENTOS -->
+      <div class="container my-4 p-4">
+        <h2 class="h2_large verde">Partidas del torneo </h2>
+        <div  *ngFor="let enfrentamiento of enfrentamientos" class="match-container">
+          <div class="match-items">
+            <div class="card_match">
+              <div class="match_main">
+                <div class="match-left">
+                  <div class="match-text-wrap">
+                    <div class="match-text">
+                      <div class="match-text-vs">{{enfrentamiento.equipo1}}</div>
+                    </div>
+                  </div>
+                  <div class="match-result">
+                    <div class="match-win">{{enfrentamiento.resultadoEquipo1}} - {{enfrentamiento.resultadoEquipo2}}</div>
+                  </div>
+                 
+                  <div class="match-text-wrap">
+                    <div class="match-text">
+                      <div class="match-text-vs">{{enfrentamiento.equipo2}}</div>
+                    </div>
+                  </div>
+                 
+                </div>
+                <div class="match-right">
+                  <div class="match-torneo">
+                    <div class="text-block-17">Ganador de la partida: {{enfrentamiento. ganador}}</div>
+                  </div>
+                  
+                 
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row my-auto">
+          <div class="col-md-12">
+           
+          </div>
+        </div>
+
+      </div>
+</div>
+

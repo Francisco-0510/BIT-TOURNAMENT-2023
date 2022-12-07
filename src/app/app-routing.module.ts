@@ -16,6 +16,14 @@ import { DetalleEnfrentamientoComponent } from './general/detalle-enfrentamiento
 import { DetalleEquiposComponent } from './general/detalle-equipos/detalle-equipos.component';
 import { DetalleTorneoComponent } from './general/detalle-torneo/detalle-torneo.component';
 import { DetalleVideojuegosComponent } from './general/detalle-videojuegos/detalle-videojuegos.component';
+import { TorneosComponent } from './estudiante/torneos/torneos.component';
+import { InscribirTorneosComponent } from './estudiante/inscribir-torneos/inscribir-torneos.component';
+import { TorneosEnfrentamientosComponent } from './admin/torneos-enfrentamientos/torneos-enfrentamientos.component';
+import { FormularioEnfrentamientosComponent } from './admin/formulario-enfrentamientos/formulario-enfrentamientos.component';
+import { VideojuegosComponent } from './estudiante/videojuegos/videojuegos.component';
+import { EquiposComponent } from './estudiante/equipos/equipos.component';
+import { EnfrentamientoEstudianteComponent } from './estudiante/enfrentamiento-estudiante/enfrentamiento-estudiante.component';
+import { VerEnfrentamientosEstudianteComponent } from './estudiante/ver-enfrentamientos-estudiante/ver-enfrentamientos-estudiante.component';
 LoginComponent;
 
 const routes: Routes = [
@@ -45,15 +53,27 @@ const routes: Routes = [
     component: VerTorneosComponent,
   },
   {
-    path: 'ver-enfrentamientos',
+    path: 'ver-enfrentamientos/:id',
     component: VerEnfrentamientosComponent,
+  },
+  {
+    path: 'ver-enfrentamientos-estudiante/:id',
+    component: VerEnfrentamientosEstudianteComponent,
   },
   {
     path: 'registrar-torneos',
     component: RegistrarTorneosComponent,
   },
   {
+    path: 'registrar-torneos/:id',
+    component: RegistrarTorneosComponent,
+  },
+  {
     path: 'registrar-videojuegos',
+    component: RegistrarVideojuegosComponent,
+  },
+  {
+    path: 'registrar-videojuegos/:id',
     component: RegistrarVideojuegosComponent,
   },
   {
@@ -80,6 +100,42 @@ const routes: Routes = [
     path: 'detalle-videojuego',
     component: DetalleVideojuegosComponent
   },
+  {
+    path: 'estudiante-torneo',
+    component: TorneosComponent
+  },
+  {
+    path: 'inscribirse/:id',
+    component: InscribirTorneosComponent
+  },
+  {
+    path: 'torneos-enfrentamientos',
+    component: TorneosEnfrentamientosComponent
+  },
+  {
+    path: 'form-enfrentamiento/:id',
+    component: FormularioEnfrentamientosComponent
+  },
+  {
+    path: 'form-enfrentamiento/:id/:idE',
+    component: FormularioEnfrentamientosComponent
+  },
+  {
+    path: 'estudiante-videojuegos',
+    component: VideojuegosComponent
+  },
+  {
+    path: 'estudiante-enfrentamiento',
+    component: EnfrentamientoEstudianteComponent
+  },
+  {
+    path: 'estudiante-equipos',
+    component: EquiposComponent
+  },
+  
+  
+  
+  
   
   
   {

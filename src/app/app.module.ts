@@ -23,6 +23,16 @@ import { DetalleTorneoComponent } from './general/detalle-torneo/detalle-torneo.
 import { DetalleEquiposComponent } from './general/detalle-equipos/detalle-equipos.component';
 import { DetalleVideojuegosComponent } from './general/detalle-videojuegos/detalle-videojuegos.component';
 import { DetalleEnfrentamientoComponent } from './general/detalle-enfrentamiento/detalle-enfrentamiento.component';
+import { TorneosComponent } from './estudiante/torneos/torneos.component';
+import { InscribirTorneosComponent } from './estudiante/inscribir-torneos/inscribir-torneos.component';
+import { TorneosEnfrentamientosComponent } from './admin/torneos-enfrentamientos/torneos-enfrentamientos.component';
+import { FormularioEnfrentamientosComponent } from './admin/formulario-enfrentamientos/formulario-enfrentamientos.component';
+import { MenuEstudianteComponent } from './shared/menu-estudiante/menu-estudiante.component';
+import { MenuInicioComponent } from './shared/menu-inicio/menu-inicio.component';
+import { VideojuegosComponent } from './estudiante/videojuegos/videojuegos.component';
+import { EquiposComponent } from './estudiante/equipos/equipos.component';
+import { EnfrentamientoEstudianteComponent } from './estudiante/enfrentamiento-estudiante/enfrentamiento-estudiante.component';
+import { VerEnfrentamientosEstudianteComponent } from './estudiante/ver-enfrentamientos-estudiante/ver-enfrentamientos-estudiante.component';
  
 
 @NgModule({
@@ -44,7 +54,17 @@ import { DetalleEnfrentamientoComponent } from './general/detalle-enfrentamiento
     DetalleTorneoComponent,
     DetalleEquiposComponent,
     DetalleVideojuegosComponent,
-    DetalleEnfrentamientoComponent
+    DetalleEnfrentamientoComponent,
+    TorneosComponent,
+    InscribirTorneosComponent,
+    TorneosEnfrentamientosComponent,
+    FormularioEnfrentamientosComponent,
+    MenuEstudianteComponent,
+    MenuInicioComponent,
+    VideojuegosComponent,
+    EquiposComponent,
+    EnfrentamientoEstudianteComponent,
+    VerEnfrentamientosEstudianteComponent
   ],
   imports: [
     BrowserModule,

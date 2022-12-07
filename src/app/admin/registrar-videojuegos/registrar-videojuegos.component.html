@@ -2,7 +2,8 @@
 <div class="container pt-5 my-5">
     <div class="card w-75 m-auto bg-dark text-center  p-4">
         <div class="card-header text-start">
-            <h2 class="h2_large py-2 verde">Registrar Un Nuevo Videojuego</h2>
+            <h2 [hidden]="id" class="h2_large py-2 verde">Registrar Un Nuevo Videojuego</h2>
+            <h2 *ngIf="id" class="h2_large py-2 verde">Actualizar Videojuego</h2>
         </div>
         <div class="card-body container_form">
             <form autocomplete="off" class="row align-items-center" [formGroup]="miFormulario">
@@ -40,66 +41,19 @@
                             <span *ngIf="campoValido('url')" class="form-text text-danger">
                                 Campo obligatorio</span>
                         </div>
+                        <input  hidden class="form-control" formControlName="idVideojuego"  type="text">
+
                     </div>
                 </div>
                 <div class="row gx-4 g-2 mb-3 text-center">
                     <div class="">
-                        <button class="btn btn_primary " type="submit" [disabled]="miFormulario.invalid" (click)="save()">Registrar</button>
+                        <button *ngIf="id" type="submit" class="btn btn-success" (click)="save()">Actualizar</button>
+
+                        <button [hidden]="id" class="btn btn_primary " type="submit" [disabled]="miFormulario.invalid" (click)="save()">Registrar</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-   <!--  <h2 class="h2_large py-2 verde">Registrar Un Nuevo Videojuego</h2>
-    <div class="container container_form p-3">
-        <form autocomplete="off" class="row align-items-center" [formGroup]="miFormulario">
-
-            <div class=" row gx-4 g-2 mb-3 ">
-                <div class="col-md">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="nombreVideojuego"
-                            placeholder="Ingrese el nombre del Videojuego">
-                        <span *ngIf="campoValido('nombreVideojuego')" class="form-text text-danger">
-                            Campo obligatorio</span>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="modalidad"
-                            placeholder="Ingrese la modalidad del Videojuego">
-                        <span *ngIf="campoValido('modalidad')" class="form-text text-danger">
-                            Campo obligatorio</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class=" row gx-4 g-2 mb-3 ">
-                <div class="col-md">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="descripcion"
-                            placeholder="Ingrese la descripcion del Videojuego">
-                        <span *ngIf="campoValido('descripcion')" class="form-text text-danger">
-                            Campo obligatorio</span>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" formControlName="url"
-                            placeholder="Ingrese URL de la imagen del Videojuego">
-                        <span *ngIf="campoValido('url')" class="form-text text-danger">
-                            Campo obligatorio</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row gx-4 g-2 mb-3 text-center">
-                <div class="">
-                    <button type="submit" [disabled]="miFormulario.invalid" (click)="save()"><a
-                            class="btn btn_primary ">Registrar Videojuego</a></button>
-                </div>
-            </div>
-
-
-        </form>
-    </div> -->
+   
 </div>

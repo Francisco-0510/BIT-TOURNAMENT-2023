@@ -23,12 +23,54 @@ export class AdminServicesService {
   }
 
   verVideojuegos(){
-    return this.http.get(`${this.URL}/videojuegos/getAll.php`);
+    return this.http.get(`${this.URL}videojuegos/getAll.php`);
+  }
+  verVideojuego(id: number){
+    return this.http.get(`${this.URL}videojuegos/getOne.php?idVideojuego=${id}`);
+  }
+  
+
+  eliminarVideojuego(idVideojuego: any){
+    return this.http.get(`${this.URL}videojuegos/delete.php?idVideojuego=${idVideojuego}`);
+
+  }
+
+  actualizarVideojuego(form: any){
+    return this.http.post(`${this.URL}videojuegos/update.php`, JSON.stringify(form));
   }
 
   verTorneo(id: number){
     return this.http.get(`${this.URL}torneos/getOne.php?idTorneo=${id}`);
   }
+
+  eliminarTorneo(idTorneo: any){
+    return this.http.get(`${this.URL}torneos/delete.php?idTorneo=${idTorneo}`);
+  }
+
+  actualizarTorneo(form: any){
+    return this.http.post(`${this.URL}torneos/update.php`, JSON.stringify(form));
+  }
+
+  verEnfrentamiento(id: number){
+    return this.http.get<any[]>(`${this.URL}enfren/getAll.php?idTorneo=${id}`);
+  }
+
+  verEnfrentamientoOne(id: number){
+    return this.http.get(`${this.URL}enfren/getOne.php?idEnfrentamiento=${id}`);
+  }
+
+  actualizarEnfrentamiento(form: any){
+    return this.http.post(`${this.URL}enfren/update.php`, JSON.stringify(form));
+  }
+
+  verEquiposIns(id: number){
+    return this.http.get(`${this.URL}enfren/EquiposIns.php?idTorneo=${id}`);
+  }
+
+  registrarEnfrentamiento(enfrentamiento:any){
+    return this.http.post(`${this.URL}enfren/add.php`, JSON.stringify(enfrentamiento));
+  }
+
   
   
 

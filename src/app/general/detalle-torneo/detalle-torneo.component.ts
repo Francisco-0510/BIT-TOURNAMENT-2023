@@ -20,7 +20,12 @@ export class DetalleTorneoComponent implements OnInit {
     activo: '',
     fecha: '',
     hora: '',
-    url: ''
+    url: '',
+    urlT: '',
+    reglas: '',
+    precio: '',
+    tipoTorneo: '',
+    tamanoEquipo: '',
   }
  
 
